@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>HarperBlog | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="FOR CSS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HarperBlog">
+<meta property="og:url" content="http://yoursite.com/2019/11/09/CSS/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="FOR CSS">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:%5CUsers%5C20193%5CDocuments%5C%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%5Csource%5Cimages%5Cct_boxmodel.gif">
+<meta property="article:published_time" content="2019-11-09T03:45:39.000Z">
+<meta property="article:modified_time" content="2019-11-09T11:10:52.848Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="FOR CSS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:%5CUsers%5C20193%5CDocuments%5C%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%5Csource%5Cimages%5Cct_boxmodel.gif">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-CSS" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/09/CSS/" class="article-date">
+  <time datetime="2019-11-09T03:45:39.000Z" itemprop="datePublished">2019-11-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      HarperBlog
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="FOR-CSS"><a href="#FOR-CSS" class="headerlink" title="FOR CSS"></a><center>FOR CSS</center></h1><a id="more"></a>
+
+<h2 id="First-update-time-2019-11-09"><a href="#First-update-time-2019-11-09" class="headerlink" title="First update time: 2019.11.09"></a>First update time: 2019.11.09</h2><h3 id="元素选择器"><a href="#元素选择器" class="headerlink" title="元素选择器"></a>元素选择器</h3><p>设置如html、h1、p等的样式</p>
+<p>p{***}</p>
+<h3 id="类选择器class"><a href="#类选择器class" class="headerlink" title="类选择器class"></a>类选择器class</h3><p>使用 <strong>.</strong> ；可以与元素选择器结合使用以缩小范围，如p.em{***} ;</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.important</span> &#123;<span class="attribute">font-weight</span>:bold;&#125;</span><br><span class="line"><span class="selector-class">.warning</span> &#123;<span class="attribute">font-style</span>:italic;&#125;</span><br><span class="line"><span class="selector-class">.important</span><span class="selector-class">.warning</span> &#123;<span class="attribute">background</span>:silver;&#125; 对同时含<span class="selector-tag">important</span>和<span class="selector-tag">warning</span>的类进行规定</span><br><span class="line">&lt;p class="important warning"&gt;   加粗、斜体、背景银色都有</span><br></pre></td></tr></table></figure>
+
+<h3 id="ID选择器"><a href="#ID选择器" class="headerlink" title="ID选择器"></a>ID选择器</h3><p>使用 *<em># *</em> ；在同一个HTML文档中，只能使用一次，且元素中只能有一个id名；id名区分大小写；属性不能包括空格</p>
+<h3 id="CSS后代选择器"><a href="#CSS后代选择器" class="headerlink" title="CSS后代选择器"></a>CSS后代选择器</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">stype</span>=<span class="string">"text/css"</span>&gt;</span></span><br><span class="line">li strong&#123;</span><br><span class="line"><span class="css">    <span class="selector-tag">font-style</span><span class="selector-pseudo">:italic</span>;           斜体的</span></span><br><span class="line">    font-weight:normal/n times;  字体粗细</span><br><span class="line">    &#125;               字体粗细</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">strong</span>&gt;</span>我是斜体字。这是因为 strong 元素位于 li 元素内。<span class="tag">&lt;/<span class="name">strong</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="后代选择器和子选择器"><a href="#后代选择器和子选择器" class="headerlink" title="后代选择器和子选择器"></a>后代选择器和子选择器</h3><p>如果不希望选择任意的后代元素，而是希望缩小范围，只选择某个元素的子元素，使用子选择器（Child selector）空格无影响</p>
+<p>例如，如果您希望选择只作为 h1 元素子元素的 strong 元素，可以这样写：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> &gt; <span class="selector-tag">strong</span> &#123;<span class="attribute">color</span>:red;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个规则会把第一个 h1 下面的两个 strong 元素变为红色，但是第二个 h1 中的 strong 不受影响：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>This is <span class="tag">&lt;<span class="name">strong</span>&gt;</span>very<span class="tag">&lt;/<span class="name">strong</span>&gt;</span> <span class="tag">&lt;<span class="name">strong</span>&gt;</span>very<span class="tag">&lt;/<span class="name">strong</span>&gt;</span> important.<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>This is <span class="tag">&lt;<span class="name">em</span>&gt;</span>really <span class="tag">&lt;<span class="name">strong</span>&gt;</span>very<span class="tag">&lt;/<span class="name">strong</span>&gt;</span><span class="tag">&lt;/<span class="name">em</span>&gt;</span> important.<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">table</span><span class="selector-class">.company</span> <span class="selector-tag">td</span> &gt; <span class="selector-tag">p</span></span><br></pre></td></tr></table></figure>
+
+<p>上面的选择器会选择作为 td 元素子元素的所有 p 元素，这个 td 元素本身从 table 元素继承，该 table 元素有一个包含 company 的 class 属性。</p>
+<h3 id="兄弟选择器"><a href="#兄弟选择器" class="headerlink" title="兄弟选择器"></a>兄弟选择器</h3><p>同时选择紧连在一起的两个元素（相同的父元素），用<strong>+</strong></p>
+<p>h1+p{}</p>
+<p>若相邻多个元素相同，选择时规定的是最后两个</p>
+<h3 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h3><p>锚伪类a: link…</p>
+<p>first-child伪类：</p>
+<p>p:first-child{}–作为元素中子元素的&lt;p&gt;中第一个的p</p>
+<p>p&gt;li:first-child{}–所有含&lt;p&gt;子元素中的第一个&lt;li&gt;</p>
+<p>p:first-child&gt;li{}–作为元素中子元素的&lt;p&gt;中第一个的p中的所有&lt;li&gt;</p>
+<p><strong>伪元素</strong>：first-line、first-letter、before(在元素水平前面（content）加内容，如图片）、after（与before相反）</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span><span class="selector-pseudo">:before</span></span><br><span class="line">  &#123;</span><br><span class="line">  <span class="attribute">content</span>:<span class="built_in">url</span>(logo.gif);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">h1</span><span class="selector-attr">[title]</span></span></span><br><span class="line">            &#123;</span><br><span class="line"><span class="css">                <span class="selector-tag">color</span><span class="selector-pseudo">:red</span>;</span></span><br><span class="line">            &#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span> <span class="attr">title</span>=<span class="string">"Hello world"</span>（或许可以删去或改）&gt;</span>Hello world<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span>   注意：<span class="tag">&lt;<span class="name">a</span> <span class="attr">title</span>=<span class="string">***</span> <span class="attr">herf</span>=<span class="string">"***"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line">当存在多个title时，可规定[title=***]---<span class="tag">&lt;<span class="name">p</span> <span class="attr">title</span>=<span class="string">"***"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">当使多个title元素有相同属性(部分属性匹配）：[title~=hello]---<span class="tag">&lt;<span class="name">p</span> <span class="attr">title</span>=<span class="string">"hello word"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">                                            <span class="tag">&lt;<span class="name">p</span> <span class="attr">title</span>=<span class="string">"student hello"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">a[herf][title]只对<span class="tag">&lt;<span class="name">a</span> <span class="attr">title</span>=<span class="string">“**</span> <span class="attr">herf</span>=<span class="string">"链接"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span>起作用</span><br><span class="line">img[alt]...</span><br><span class="line">假设希望将指向 Web 服务器上某个指定文档的超链接变成红色，可以这样写：</span><br><span class="line">a[href="http://www.w3school.com.cn/about_us.asp"] &#123;color: red;&#125;</span><br><span class="line">特定属性选择器：</span><br><span class="line">*[lang|="en"] &#123;color: red;&#125;</span><br><span class="line">上面这个规则会选择 lang 属性等于 en 或以 en- 开头的所有元素。</span><br><span class="line">属性选择器在(无class和id）表单中的应用：</span><br><span class="line">input[type="text"]</span><br><span class="line">&#123;</span><br><span class="line">&#125;</span><br><span class="line">input[type="button"]</span><br><span class="line">&#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">name</span>=<span class="string">"input"</span> <span class="attr">action</span>=<span class="string">"表单发送至"</span> <span class="attr">method</span>=<span class="string">"get"</span>&gt;</span>  method：get/post</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">...</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">...</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span><span class="attr">...</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="样式表"><a href="#样式表" class="headerlink" title="样式表"></a>样式表</h3><ul>
+<li><p>外部样式表：每个页面都应用相同的样式时，在**.css文件中编辑好样式表，应用时在页面的head中用&lt;link&gt;标签链接到样式表</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"**.css"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span> （relations)关联=样式表单</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>内部样式表：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span></span><br><span class="line"><span class="css">  <span class="selector-tag">hr</span> &#123;<span class="attribute">color</span>: sienna;&#125;   分割线</span></span><br><span class="line"><span class="css">  <span class="selector-tag">body</span> &#123;<span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">"images/back40.gif"</span>);&#125;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>多重样式：当外部样式表和内部样式表同时定义一个属性时，以内部样式表为先，外部样式表进行补充。</p>
+</li>
+</ul>
+<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>可以使用<strong>background-color</strong>属性来设置背景色，用<strong>background-color</strong>属性来设置背景图像</p>
+<p>如果希望背景色从元素中的文本向外少有延伸，只需增加一些内边距：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;<span class="attribute">background-color</span>: gray; <span class="attribute">padding</span>: <span class="number">20px</span>;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果需要设置一个背景图像，必须为这个属性设置一个 <strong>URL 值</strong>（从互联网上得到资源的位置和访问方法的表示）</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;<span class="attribute">background-image</span>: <span class="built_in">url</span>(/i/eg_bg_04.gif);&#125;</span><br></pre></td></tr></table></figure>
+
+<p>对背景图像进行<strong>平铺repeat</strong>：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;<span class="attribute">background-repeat</span>:no repeat/repeat/repeat-x/repeat-y;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>改变图像的<strong>位置position</strong>：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;<span class="attribute">background-position</span>:center/bottom/right/left/top&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>关键字</strong>：对应图像的更加准确的位置，用5个关键字中两个来描述，若只有一个另一个默认为center</li>
+<li><strong>百分数值</strong>：background-position: 50% 50%。如果图像位于 0% 0%，其左上角将放在元素内边距区的左上角。如果图像位置是 100% 100%，会使图像的右下角放在右边距的右下角。因此，如果想把一个图像放在水平方向 2/3、垂直方向 1/3 处，可以这样声明：background-position: 66% 33%;</li>
+</ul>
+<p>​                如果只提供一个百分数值，所提供的这个值将用作水平值，垂直值将假设为 50%。这一点与关键字类</p>
+<p>​                 似。background-position 的默认值是 0% 0%，在功能上相当于 top left。</p>
+<ul>
+<li><p><strong>长度值</strong>：background-position:50px 50px。长度值解释的是元素内边距区左上角的偏移。偏移点是图像的左上角。比如，如果设置值为 50px 100px，图像的左上角将在元素内边距区左上角向右 50 像素、向下 100 像素的位置上 。</p>
+<p>【注意，这一点与百分数值不同，因为偏移只是从一个左上角到另一个左上角。也就是说，图像的左上角与 background-position 声明中的指定的点对齐。】</p>
+</li>
+</ul>
+<p><strong>背景关联attachment</strong>：防止图像随文档的滚动而滚动</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;<span class="attribute">backgroung-attachment</span>:fixed;&#125;<span class="selector-tag">--unfixed</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h3><p><strong>缩进文本text-indent</strong>(首行缩进)</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p &#123;text-intent:5em;&#125;  10px=1em---所有段落首行缩进</span><br></pre></td></tr></table></figure>
+
+<p>​      注：一般用于块级元素，对行内元素不起作用；对行内元素，可用左内边距或外边距创造缩进效果</p>
+<ul>
+<li>缩进可设置为<strong>负值</strong>。不过在为 text-indent 设置负值时要当心，如果对一个段落设置了负值，那么首行的某些文本可能会超出浏览器窗口的左边界。为了避免出现这种显示问题，建议针对负缩进再设置一个外边距或一些内边距：p {text-indent: -5em; padding-left: 5em;}</li>
+<li><strong>百分比</strong>：要相对于父元素的宽度 div{width:500px;}p{text-indent:20%;}</li>
+<li><strong>继承</strong>：行内元素缩进可以通过id、class等继承</li>
+</ul>
+<p><strong>水平对齐text-align</strong></p>
+<p>  right/left/center/&lt;CENTER&gt;(使整个元素居中)/justify（调整字间距使文本左右两端对齐）</p>
+<p>​      注：将块级元素或表元素居中，要通过在这些元素上适当地设置左、右外边距来实现。 </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;<span class="attribute">width</span>: <span class="number">500px</span>;&#125;</span><br><span class="line"><span class="selector-tag">p</span> &#123;<span class="attribute">text-indent</span>: <span class="number">20%</span>;&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>字间隔word-spacing、字母间隔letter-spacing</strong></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span><span class="selector-class">.spread</span> &#123;<span class="attribute">word-spacing</span>: <span class="number">30px</span>;&#125;    注意元素定位写法，不可忽略 . </span><br><span class="line">&lt;p class="spread"&gt;</span><br><span class="line"><span class="selector-tag">This</span> <span class="selector-tag">is</span> <span class="selector-tag">a</span> <span class="selector-tag">paragraph</span>. <span class="selector-tag">The</span> <span class="selector-tag">spaces</span> <span class="selector-tag">between</span> <span class="selector-tag">words</span> <span class="selector-tag">will</span> <span class="selector-tag">be</span> <span class="selector-tag">increased</span>.</span><br><span class="line">&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>字符转换text-transform</strong></p>
+<ul>
+<li>none：不做改变</li>
+<li>uppercase：全部转为大写字母</li>
+<li>lowercase：全部转换为小写字母</li>
+<li>**capitalize：首字母自动大写</li>
+</ul>
+<p><strong>文本装饰text-decoration</strong></p>
+<ul>
+<li>none：关闭原有元素上的装饰（如去除链接的下划线）</li>
+<li>undeline：加下划线</li>
+<li>overline：加上划线</li>
+<li>line-through：加贯穿线</li>
+<li>blink：使文本闪烁</li>
+</ul>
+<p>​              结合多种装饰：a link{text-decoration:underline overline}  </p>
+<p>​              元素属性值为替换而不会积累，因此若不同的装饰与同一元素匹配，取最后一个规则</p>
+<p><strong>处理空白符white-space</strong></p>
+<ul>
+<li>normal：默认HTML忽略多余空格只保留一个</li>
+<li>pre：保留空白格和回车（类似&lt;pre&gt;)</li>
+<li>nowrap：忽略空格，防止文本换行</li>
+<li>pre-wrap：保留空格、回车且能自动换行</li>
+<li>pre-line：不保留空格，但保留回车且能自动换行</li>
+</ul>
+<p><strong>字体font-family</strong></p>
+<p>包括多个字体系列，每个系列包含多种字体。</p>
+<p>若指定一个系列，则用户代理时从系列中选出已安装的</p>
+<p>若指定多种字体（用逗号连接），则优先顺序自左向右</p>
+<p>若字体名称包含一个及以上空格，用单/双引号</p>
+<p><strong>字体风格font-style</strong></p>
+<ul>
+<li>normal：文本正常显示</li>
+<li>italic：文本斜体显示</li>
+<li>oblique：文本倾斜显示</li>
+</ul>
+<p><strong>字体变形font-variant</strong></p>
+<p>小型大写字母</p>
+<p><strong>字体加粗font-weight</strong></p>
+<p>100~900；</p>
+<p>400–normal；900–bold；</p>
+<p>比所继承的粗/细一个级别：bolder/lighter；</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p&#123;...&#125;</span><br><span class="line">&lt;p&gt;***&lt;/P&gt;</span><br><span class="line">&lt;p style="font-weight:.."&gt;***&lt;/p&gt;摆脱继承</span><br></pre></td></tr></table></figure>
+
+<p><strong>字体大小font-size</strong></p>
+<p>可以以px做单位，也可用em（推荐）</p>
+<p>1em=16px（16px为浏览器默认）</p>
+<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p><strong>设置连接的样式</strong></p>
+<ul>
+<li>a:link - 普通的、未被访问的链接</li>
+<li>a:visited - 用户已访问的链接</li>
+<li>a:hover - 鼠标指针位于链接的上方</li>
+<li>a:active - 链接被点击的时刻</li>
+</ul>
+<p>用{}分别设置链接在不同状态的样式</p>
+<p>为了使定义生效，a:hover 必须位于 a:link 和 a:visited 之后！！</p>
+<p>为了使定义生效，a:active 必须位于 a:hover 之后！！</p>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p><strong>列表类型list-style-type</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> &#123;<span class="attribute">list-style-type </span>: square/decimal（数字）/circle（空心）/disc/upper-roman/lower-alpha..&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>列表项图像list-style-image</strong></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ul li &#123;list-style-image：url（地址）&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>列表标志位置list-style-position</strong></p>
+<p>确定标志在列表内部（inside）还是外部（outside）</p>
+<p><strong>简写list-style</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">li</span> &#123;<span class="attribute">list-style </span>: <span class="built_in">url</span>(example.gif) square inside&#125;</span><br></pre></td></tr></table></figure>
+
+<p>与顺序无关</p>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p><strong>表格边框border</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">table</span>, <span class="selector-tag">th</span>, <span class="selector-tag">td</span></span><br><span class="line">  &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid blue;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p>请注意，上例中的表格具有双线条边框。这是由于 table、th 以及 td 元素都有独立的边框。</p>
+<p>如果需要把表格显示为单线条边框，请使用 border-collapse 属性。</p>
+<p><strong>折叠边框border-collapse</strong></p>
+<p>border-collapse 属性设置是否将表格边框折叠为单一边框：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">table</span></span><br><span class="line">  &#123;</span><br><span class="line">  border-collapse:collapse;合并相邻边--separate分开</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">table</span>,<span class="selector-tag">th</span>, <span class="selector-tag">td</span></span><br><span class="line">  &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid black;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>表格宽度和高度width</strong>–table<strong>、height</strong>–td、th</p>
+<p>百分号、像素</p>
+<p><strong>文本对齐</strong>–td</p>
+<p>水平：text-align</p>
+<p>垂直：vertical-align（bottom/top/center)</p>
+<p><strong>表格内间距padding</strong>–th、td</p>
+<p><strong>单元格间的空白border-spacing：\</strong>px**</p>
+<h3 id="轮廓"><a href="#轮廓" class="headerlink" title="轮廓"></a>轮廓</h3><p><strong>outline：</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">outline-style:dotted/solid..</span><br><span class="line"><span class="selector-tag">outline-color</span></span><br><span class="line"><span class="selector-tag">outline-width</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="C:%5CUsers%5C20193%5CDocuments%5C%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%5Csource%5Cimages%5Cct_boxmodel.gif" alt=""></p>
+<h3 id="内边距padding"><a href="#内边距padding" class="headerlink" title="内边距padding"></a>内边距padding</h3><p>接受长度值（如cm），像素（px）或者百分比（相对于父元素），不接受负值</p>
+<p>只设置一个属性值时，代表各边都有相同的内边距；</p>
+<p>也可按照上右下左（顺时针）的顺序分别设置各边的内边距（空格隔开）；</p>
+<p>若要设置单边的内边距：padding-top/-right/-bottom/-left；</p>
+<p>注意：上下内边距与左右内边距一致，继承时上下内边距继承父元素的width而不是height；</p>
+<p>​            若同时规定同一个元素，则是替换而不是积累</p>
+<h3 id="边框border"><a href="#边框border" class="headerlink" title="边框border"></a>边框border</h3><p> 元素的边框就是围绕元素内容和内边距的一条或多条线 。</p>
+<p><strong>边框样式border-style</strong></p>
+<ul>
+<li>dotted：点状</li>
+<li>dashed：短线式</li>
+<li>solid：实线</li>
+<li>double：双实线</li>
+<li>groof：凹陷</li>
+<li>ridge：凸出</li>
+<li>inset：左+上</li>
+<li>outset：右+下</li>
+</ul>
+<p>可通过如1px solid black 来更具体设置</p>
+<p>若同时为一个边框定义多个样式，按照上右下左的顺序进行采用（用空格隔开多个属性值）</p>
+<p>若只希望设置一边边框：border-top..-style</p>
+<p>border-style: solid; border-left-style: none; 必须把单边属性放在简写属性之后。因为如果把单边属性放在 border-style 之前，简写属性的值就会覆盖单边值 none。 </p>
+<p><strong>边框宽度border-width</strong></p>
+<p>   为边框指定宽度有两种方法：可以指定长度值，比如 2px 或 0.1em；或者使用 3 个关键字之一，它们分别是   thin，medium（默认值） 和 thick。（注意：thin和thick的值并不是固定的）</p>
+<p>设置单边方法与边框样式同</p>
+<p>注意：15px 5px与 15px 5px 15px 5px 等价（值复制，上下同，左右同）</p>
+<p><strong>注意：</strong>若没有设置边框样式或者样式为none，那么边框宽度的设置无效，默认为零</p>
+<p><strong>边框颜色border-color</strong></p>
+<p>存在值复制；若没有设定，则与文本颜色同；若边框内没有文本，则边框颜色与父元素的文本颜色同；</p>
+<p>​        <strong>透明边框：border-color：transparent</strong></p>
+<p>要使图像拥有标题，则要先在&lt;div&gt;中设置一个边框–&lt;div&gt;&lt;image src=””&gt;&lt;br/&gt;图像名称&lt;/div&gt;</p>
+<h3 id="外边距margin"><a href="#外边距margin" class="headerlink" title="外边距margin"></a>外边距margin</h3><p><strong>使用单位</strong>：0.25in（四分之一英寸）、px、mm、em、%（相对于父元素的width）</p>
+<p>auto：自动均等分配可用的外边距（即居中），如果width为100%则无效</p>
+<p><strong>值复制规则：</strong></p>
+<ul>
+<li><p>如果缺少左外边距的值，则使用右外边距的值。</p>
+</li>
+<li><p>如果缺少下外边距的值，则使用上外边距的值。</p>
+</li>
+<li><p>如果缺少右外边距的值，则使用上外边距的值。(即如果只设置了一个值（top），所有边的值复制得到)</p>
+<p> <strong>提示：</strong>Netscape 和 IE 对 body 标签定义的默认边距（margin）值是 8px。而 Opera 不是这样。相反地，Opera 将内部填充（padding）的默认值定义为 8px，因此如果希望对整个网站的边缘部分进行调整，并将之正确显示于 Opera 中，那么必须对 body 的 padding 进行自定义。 </p>
+</li>
+</ul>
+<h3 id="外边距合并"><a href="#外边距合并" class="headerlink" title="外边距合并"></a>外边距合并</h3><p> 外边距合并指的是，当两个垂直外边距相遇时，它们将形成一个外边距。合并后的外边距的高度等于两个发生合并的外边距的高度中的较大者。</p>
+<ol>
+<li>当一个元素出现在另一个元素上面时，第一个元素的下外边距与第二个元素的上外边距会发生合并。 </li>
+<li>当一个元素包含在另一个元素中时（假设没有内边距或边框把外边距分隔开），它们的上和/或下外边距都会发生合并 </li>
+<li>若没有内容填充只有外边距，则top和bottom会合并为一个</li>
+</ol>
+<h3 id="position属性"><a href="#position属性" class="headerlink" title="position属性"></a>position属性</h3><ul>
+<li>static：默认，正常文本的顺序</li>
+<li>relative：块级元素的位置相对正常位置的偏移，且原空间保留（所以可能覆盖其他框）</li>
+<li>absolute：可看作块级元素相对最近的祖先元素或者包含块的偏移，原来空间不保留（所以可能覆盖其他框）</li>
+<li>fixed：即块级元素的位置不随页面滚动而改变</li>
+</ul>
+<p>相对定位中，left：-20px指元素的左边减少20个像素，即左移</p>
+<p><a href="https://www.w3school.com.cn/css/css_positioning_floating.asp" target="_blank" rel="noopener">float元素的解释与应用：</a></p>
+<h3 id="处理溢出内容overflow"><a href="#处理溢出内容overflow" class="headerlink" title="处理溢出内容overflow"></a>处理溢出内容overflow</h3><p>div {overflow: scroll;}</p>
+<p>如果元素中的内容超出了给定的宽度和高度属性，overflow 属性可以确定是否显示滚动条等行为。</p>
+<p>hidden：隐藏溢出内容；auto=scroll</p>
+<h3 id="裁剪元素clip"><a href="#裁剪元素clip" class="headerlink" title="裁剪元素clip"></a>裁剪元素clip</h3><ol>
+<li>元素的位置为absolute（设置一个框）</li>
+<li>{clip:rect(0px 20px 50px 0px–设置框的大小)}</li>
+</ol>
+<h3 id="在行内垂直排列图像"><a href="#在行内垂直排列图像" class="headerlink" title="在行内垂直排列图像"></a>在行内垂直排列图像</h3><p>img{vertical-align:text-top/bottom}即图片插入行内时相对所在段落中文本的垂直位置</p>
+<h3 id="层叠z-index"><a href="#层叠z-index" class="headerlink" title="层叠z-index"></a>层叠z-index</h3><p>{z-index：0}为默认值，负数表示更低的优先级，正数表示更高的优先级；优先级越高越在上层。</p>
+<h3 id="块类的水平对齐"><a href="#块类的水平对齐" class="headerlink" title="块类的水平对齐"></a>块类的水平对齐</h3><ol>
+<li>运用margin</li>
+<li>运用absolute</li>
+<li>运用float</li>
+</ol>
+<h3 id="图像的按比例缩放"><a href="#图像的按比例缩放" class="headerlink" title="图像的按比例缩放"></a>图像的按比例缩放</h3><p>可对height或weight运用%、px进行缩放（不变形）</p>
+<h3 id="行间距line-height"><a href="#行间距line-height" class="headerlink" title="行间距line-height"></a>行间距line-height</h3><p>可用%、px、数值（相对标准行高的倍数）进行设置</p>
+<h3 id="光标cursor设置"><a href="#光标cursor设置" class="headerlink" title="光标cursor设置"></a>光标cursor设置</h3><p>&lt;span style=”cursor:auto/crosshair/default/pointer/move/e-resize/ne-resize/nw-resize/n-resize/se-resize/sw-resize/s-resize/w-resize/text/wait/help”&gt;&lt;/span&gt;</p>
+<h3 id="可见性visibility"><a href="#可见性visibility" class="headerlink" title="可见性visibility"></a>可见性visibility</h3><p>hidden&amp;visible</p>
+<h3 id="创建导航栏"><a href="#创建导航栏" class="headerlink" title="创建导航栏"></a>创建导航栏</h3><p>用&lt;ul&gt;&lt;li&gt;进行设置，其中&lt;li&gt;元素中将添加不同的&lt;a href&gt;]</p>
+<p>用list-style-type设置为none或者不设置；添加border；</p>
+<p>a{ display:block }- 把链接显示为块元素可使整个链接区域可点击（不仅仅是文本），同时也允许规定宽度、背颜 </p>
+<p>创建水平菜单:1.将&lt;ul&gt;设置为float：left，width：100% 2.规定li {display：inline}</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/11/09/CSS/" data-id="ckbu9dstv0004ekv8fniva6j1" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FOR-CSS/" rel="tag">FOR CSS</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/06/25/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/10/07/JavaScript/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">JavaScript</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/FOR-CSS/" rel="tag">FOR CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/FOR-HTML/" rel="tag">FOR HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/FOR-Java/" rel="tag">FOR Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/FOR-JavaScript/" rel="tag">FOR JavaScript</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/FOR-CSS/" style="font-size: 10px;">FOR CSS</a> <a href="/tags/FOR-HTML/" style="font-size: 10px;">FOR HTML</a> <a href="/tags/FOR-Java/" style="font-size: 10px;">FOR Java</a> <a href="/tags/FOR-JavaScript/" style="font-size: 10px;">FOR JavaScript</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/01/Java%E7%BB%83%E6%89%8B%E9%A1%B9%E7%9B%AE/">Java Practice</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/25/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/09/CSS/">HarperBlog</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/07/JavaScript/">JavaScript</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/28/HarperBlog/">HarperBlog</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

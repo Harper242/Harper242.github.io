@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>JavaScript | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="FOR  JAVASCRIPT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript">
+<meta property="og:url" content="http://yoursite.com/2019/10/07/JavaScript/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="FOR  JAVASCRIPT">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-10-06T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-06-25T03:45:30.658Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="FOR JavaScript">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-JavaScript" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/07/JavaScript/" class="article-date">
+  <time datetime="2019-10-06T16:00:00.000Z" itemprop="datePublished">2019-10-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JavaScript
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="FOR-JAVASCRIPT"><a href="#FOR-JAVASCRIPT" class="headerlink" title="FOR  JAVASCRIPT"></a><center>FOR  JAVASCRIPT</center></h1><a id="more"></a>
+
+<h2 id="First-update-time-2019-11-16"><a href="#First-update-time-2019-11-16" class="headerlink" title="First update time:2019.11.16"></a>First update time:2019.11.16</h2><h3 id="lt-script-gt-标签"><a href="#lt-script-gt-标签" class="headerlink" title="&lt;script&gt;标签"></a>&lt;script&gt;标签</h3><p>脚本可以放在head或者body元素中，但放在body元素的<strong>底部</strong>可改善显示（编译）速度</p>
+<h3 id="外部脚本"><a href="#外部脚本" class="headerlink" title="外部脚本"></a>外部脚本</h3><p>在&lt;head&gt;或&lt;body&gt;中放置：&lt;script src=”外部文件(扩展名为.js)”&gt;&lt;/script&gt;</p>
+<p>表现和&lt;script&gt;标签一样，但是不包含&lt;script&gt;标签</p>
+<p>通过完整的URL来链接至脚本</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"https://www.w3school.com.cn/js/myScript1.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>使用了位于当前网站上的指定文件夹中的脚本</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"/js/myScript1.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>使用了与当前页面相同文件夹的脚本</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"myScript1.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="JS输出"><a href="#JS输出" class="headerlink" title="JS输出"></a>JS输出</h3><h4 id="使用innerHTML写入HTML元素"><a href="#使用innerHTML写入HTML元素" class="headerlink" title="使用innerHTML写入HTML元素"></a>使用innerHTML写入HTML元素</h4><p>document.getElementById(“id”).innerHTML =  显示内容（若为计算式则在id所在部分显示运算结果）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span>    (段落内容显示 11)</span><br><span class="line">        <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = <span class="number">5</span> + <span class="number">6</span>; </span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">script</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="使用-document-write-写入HTML输出"><a href="#使用-document-write-写入HTML输出" class="headerlink" title="使用 document.write()写入HTML输出"></a>使用 document.write()写入HTML输出</h4><p>此方法仅用于测试</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>123456<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"><span class="built_in">document</span>.write(<span class="number">5</span> + <span class="number">6</span>);</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>   //显示11</span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"document.write(5 + 6)"</span>&gt;</span>    //button元素不必在script元素中</span><br><span class="line">        试一试</span><br><span class="line">    <span class="tag">&lt;/<span class="name">button</span>&gt;</span>  //在文档完全加载（比如按下按钮后的）11 将取代所有已经显示的html内容</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="使用window-alert-写入警告框内容"><a href="#使用window-alert-写入警告框内容" class="headerlink" title="使用window.alert()写入警告框内容"></a>使用window.alert()写入警告框内容</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span>windows.alert(警告内容);<span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="使用console-log-写入浏览器控制台"><a href="#使用console-log-写入浏览器控制台" class="headerlink" title="使用console.log()写入浏览器控制台"></a>使用console.log()写入浏览器控制台</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"><span class="built_in">console</span>.log();</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>通过F12激活浏览器控制台，并在菜单中选择”控制台“</p>
+<h4 id="JS语法（在-lt-script-gt-元素中进行）"><a href="#JS语法（在-lt-script-gt-元素中进行）" class="headerlink" title="JS语法（在&lt;script&gt;元素中进行）"></a>JS语法（在&lt;script&gt;元素中进行）</h4><p><strong>1. 混合值(字面量):</strong>数值、字符串</p>
+<p>​     数值：有无小数点均可</p>
+<p>​     字符串：即文本，由双引号或者单引号包围(包括空格、标点)</p>
+<p>​      <strong>级联：</strong>字符串间使用+或者+=(级联运算符）会被无缝连接（需要空格：“a” + “ ” + “b”–a b,换行+&lt;br/&gt;）</p>
+<p><strong>2.变量值(变量):</strong>用var来定义变量（数值、字符串，不计类型）；与C语言类似；<strong>=两边留空格是好习惯</strong></p>
+<p><strong>3. 表达式是值、变量、运算符的组合，直接出计算结果（不用变量、等号），</strong></p>
+<p><strong>表达式也可包含变量(如x * 10)、字符串</strong></p>
+<p><strong>4. 标识符命名：首字母必须是字母、下划线或者$（美元），后面的还可以用数字，对大小写敏感（VAR可以）</strong></p>
+<p><strong>5. 将多个变量连在一起：下划线、大驼峰(FirstName)、小驼峰(firstName)–更受欢迎</strong></p>
+<h4 id="单行注释"><a href="#单行注释" class="headerlink" title="单行注释"></a>单行注释</h4><p>//；多行注释：/* */（注释可用于组织代码的执行来测试代码）</p>
+<h4 id="JS算数"><a href="#JS算数" class="headerlink" title="JS算数"></a>JS算数</h4><p><strong>7. 5==”5”(类型不同但等值）；5===5（类型相同且等值）；5!==”5”(等值但类型不同或类型相同但不等值 ）</strong></p>
+<p><strong>8. 幂：x \</strong> 2 或者Math.pow(x,2)**   </p>
+<p>​         *<em>仍需了解更多运算符： <a href="https://www.w3school.com.cn/js/js_arithmetic.asp" target="_blank" rel="noopener">https://www.w3school.com.cn/js/js_arithmetic.asp</a> *</em></p>
+<p>*<em>9.  位移运算符：带符号&lt;&lt;(左移低位补0);&gt;&gt;(右移高位全补原来的最高位）  不带符号&lt;&lt;&lt;,&gt;&gt;&gt;(高位全部补0)  *</em></p>
+<p>   <strong>-127&gt;&gt;2：将-127的二进制数(11111111)右移两位，右边低位溢出舍去,左边高位空位补1(表示负号);</strong></p>
+<p>   <strong>-127&gt;&gt;&gt;2：将-127的二进制数(11111111)右移两位，右边低位溢出舍去,左边高位空位补0(表示正号)；</strong></p>
+<h4 id="数据类型typeof"><a href="#数据类型typeof" class="headerlink" title="数据类型typeof"></a>数据类型typeof</h4><p><strong>返回变量或表达式的类型</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = </span><br><span class="line">    <span class="keyword">typeof</span> <span class="string">"**"</span>/数值/未赋值变量/对象（包括数组)/<span class="literal">true</span>(<span class="literal">false</span>)   </span><br><span class="line">     显示:string/number/<span class="literal">undefined</span>/object/boolean</span><br></pre></td></tr></table></figure>
+
+<p>   “ “的值是空值，但返回值是string；null的原意是nothing,不存在的事物，但在js中它的返回值是object</p>
+<p>  清空对象：person = undefined</p>
+<h4 id="JS函数"><a href="#JS函数" class="headerlink" title="JS函数"></a>JS函数</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params">p1, p2</span>) </span>&#123;     <span class="comment">//函数名(命名规则和变量同）(参数1，参数2..)</span></span><br><span class="line">    <span class="keyword">return</span> p1 * p2;              <span class="comment">// 该函数返回 p1 和 p2 的乘积</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​    函数可以写在&lt;script&gt;元素中的任意位置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">toCelsius</span>(<span class="params">f</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (<span class="number">5</span>/<span class="number">9</span>) * (f<span class="number">-32</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = toCelsius;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">不使用()将返回函数的整个定义function toCelsius(f) &#123;return (5/</span><span class="number">9</span>) * (f<span class="number">-32</span>);&#125;</span><br></pre></td></tr></table></figure>
+
+<p>  可以将整个函数[函数名()]当作变量来使用  x = 2 + 函数</p>
+<p>  return的结果只能被返回到本函数的(参数)中</p>
+<h4 id="JS对象"><a href="#JS对象" class="headerlink" title="JS对象"></a>JS对象</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;   属性|</span><br><span class="line"><span class="keyword">var</span> car=&#123;<span class="attr">type</span>:<span class="string">"porsche"</span>,<span class="attr">model</span>:<span class="string">"911"</span>,<span class="attr">color</span>:<span class="string">"white"</span>&#125;;  <span class="comment">//属性间用 ， 连接</span></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = car.type;或者car[<span class="string">"type"</span>]; <span class="comment">//注意写法</span></span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="JS对象方法"><a href="#JS对象方法" class="headerlink" title="JS对象方法"></a>JS对象方法</h4><p>以函数定义被储存在属性中</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="keyword">var</span> person&#123;</span><br><span class="line">        firstName:<span class="string">"Bill"</span>,   <span class="comment">//折行</span></span><br><span class="line">        lastName :<span class="string">"Gates"</span>,  <span class="comment">//空格</span></span><br><span class="line">        fullName :<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">this</span>.firstName + <span class="string">" "</span> + <span class="keyword">this</span>.lastName;</span><br><span class="line">            &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>对象的定义允许空格和折行</p>
+<p>​    最下方内容还需多加研究    <a href="https://www.w3school.com.cn/js/js_objects.asp" target="_blank" rel="noopener">https://www.w3school.com.cn/js/js_objects.asp</a>             </p>
+<h4 id="JS字符串"><a href="#JS字符串" class="headerlink" title="JS字符串"></a>JS字符串</h4><p><strong>字符串内的空格会保留</strong></p>
+<p>内建属性<strong>length</strong>可返回字符串的<strong>长度</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> txt = <span class="string">"shshshshshs"</span>;</span><br><span class="line"><span class="keyword">var</span> sln = txt.length;</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = sln; 或者直接写= txt.length;</span><br></pre></td></tr></table></figure>
+
+<p>为了避免内容的引号与字符串的引号配对，内容的引号前使用 \ </p>
+<p><strong>在JS中有效的转义字符：</strong></p>
+<ul>
+<li>\\ ，\“”，\‘’ </li>
+<li>\n(光标正移到下一行的位置)</li>
+<li>\r(光标回到当行的行首)—–所以\r\n就是开下一行的行首</li>
+<li>\b退格键</li>
+<li>\f换页</li>
+<li>\t水平制表符</li>
+<li>\v垂直制表符（回车？）</li>
+</ul>
+<p><strong>整个字符串在写的时候的中间换行（当然也可以直接整个写在下一行）</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = <span class="string">"Hello"</span> + <span class="string">"Kitty"</span>;  <span class="comment">//太长了写的时候最好换行</span></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = <span class="string">"Hello"</span> + </span><br><span class="line">    <span class="string">"Kitty"</span>;                                                    <span class="comment">//这种写的方法会带来错误</span></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = <span class="string">"Hello \ </span></span><br><span class="line"><span class="string">     Kitty"</span>;                                                    <span class="comment">//这是可行的方法</span></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = <span class="string">"Hello"</span> + </span><br><span class="line">    <span class="string">"Kitty"</span>;                                                    <span class="comment">//这是最保险的方法</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>查找字符串中的字符串</strong> 对大小写敏感</p>
+<p>   <strong>indexof（）</strong>返回字符串中指定文本首次出现的索引</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">"The full name of China is the People's Republic of China."</span>;</span><br><span class="line"><span class="keyword">var</span> pos = str.indexOf(<span class="string">"China"</span>);</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = pos;</span><br></pre></td></tr></table></figure>
+
+<p>   空格包括在内，<strong>0</strong>是指第一个位置！</p>
+<p>   <strong>lastIndexof()</strong> 返回字符串中指定文本最后一次出现的索引（注意I大写）</p>
+<p>​     注意：如果未找到文本，indexof和lastIndexo均返回-1</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">"The full name of China is the People's Republic of China."</span>;</span><br><span class="line"><span class="keyword">var</span> pos = str.indexOf(<span class="string">"China"</span>, <span class="number">18</span>);</span><br><span class="line"><span class="comment">//指从开头开始的第19位开始检索</span></span><br></pre></td></tr></table></figure>
+
+<p>​     注意：在lastIndexo中，第二个参数也同样是指从开头开始算的位数，只不过检索时往回检索</p>
+<p>​    <strong>search()</strong>方法的作用相同，但是无法设置第二个开始位置参数</p>
+<p><strong>提取部分字符串</strong></p>
+<p>   <strong>slice(start,end)</strong> 提取字符串的某个部分并在新字符串中返回<strong>从左至右</strong>被提取的部分,设置拷贝部分开始位置和终止位置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">"Apple, Banana, Mango"</span>;</span><br><span class="line"><span class="keyword">var</span> res = str.slice(<span class="number">7</span>,<span class="number">13</span>);</span><br></pre></td></tr></table></figure>
+
+<p>  注意：如果设置了为负的参数，则从字符串的结尾开始计数（不要求两个参数同意正负）</p>
+<p>   <strong>substring(start,end)</strong>功能于slice()相似，不过无法接受负的索引</p>
+<p>   <strong>substr()</strong>作用类似于slice()，不过第二个参数规定被提取部分的长度，如果首个参数为负，将从结尾处开始计算</p>
+<p>以上同： 如果省略第二个参数，则该方法将裁剪字符串中的剩余部分（不能省略第一个参数）</p>
+<p><strong>替换字符串内容</strong></p>
+<p>  <strong>replace(被替换字符，替换字符)</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"myFunction()"</span>&gt;</span>试一下<span class="tag">&lt;/<span class="name">button</span>&gt;</span>          //需要函数定义</span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span></span><br><span class="line">    hahaha</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">myFunction</span><span class="params">()</span></span>&#123;                              <span class="comment">//注意函数定义的写法</span></span></span><br><span class="line"><span class="actionscript">        <span class="keyword">var</span> txt = </span></span><br><span class="line"><span class="javascript">            <span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML;  <span class="comment">//注意引用的方式</span></span></span><br><span class="line"><span class="actionscript">        <span class="keyword">var</span> aa = txt.replace(<span class="string">"hahaha"</span>,<span class="string">"*****"</span>);</span></span><br><span class="line"><span class="javascript">        <span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = aa;   <span class="comment">//要返回值</span></span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>   注意：默认只替换首个字符；如需替换所有匹配replace(/***/g,”…”);   g用于全局搜索</p>
+<p>​               <em>对匹配内容大小敏感*</em>；如需执行大小写不敏感的匹配，使用replace(/***/i,”…”);   i是大小写不敏感</p>
+<p><strong>转换为大写和小写</strong></p>
+<p>   <strong>toUpperCase()</strong>将字符串转换为大写（结合button）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> text1 = <span class="string">"Hello World"</span>;</span><br><span class="line"><span class="keyword">var</span> text2 = text1.toUpperCase()         <span class="comment">//别忘了（）</span></span><br></pre></td></tr></table></figure>
+
+<p>   <strong>toLowerCase()</strong> 将字符串转换为小写</p>
+<p><strong>连接的两个及以上字符</strong></p>
+<p>   <strong>concat()</strong>可用于代替运算符  <strong>+</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> text = <span class="string">"Hello"</span>.contat(<span class="string">" "</span>,<span class="string">"World"</span>); <span class="comment">//相当于"Hello" + " " + "World"</span></span><br><span class="line">（或者将<span class="string">"Hello"</span><span class="string">"World"</span>另外定义)</span><br></pre></td></tr></table></figure>
+
+<p><strong>删除字符串两端的空白符</strong></p>
+<p>   <strong>.trim()</strong> 括号内无填充</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> txt1 = <span class="string">"   hello   "</span>;</span><br><span class="line"><span class="keyword">var</span> txt2 = txt1.trim();</span><br></pre></td></tr></table></figure>
+
+<p><strong>返回字符串中的指定字符</strong></p>
+<p>​    <strong>charAt()</strong> 返回指定下标（即位置）的字符</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">"hello"</span>;</span><br><span class="line"><span class="keyword">var</span> s = str.charAt(<span class="number">0</span>);  <span class="comment">//返回h</span></span><br></pre></td></tr></table></figure>
+
+<p>   找不到字符时返回空字符；</p>
+<p>​     <strong>charCodeAt()</strong> 返回指定位置的字符的unicode编码</p>
+<p>​          如 h 返回 72；</p>
+<p><strong>属性访问</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">"hello"</span>;</span><br><span class="line"><span class="keyword">var</span> s = str[<span class="number">0</span>];        <span class="comment">//返回h</span></span><br></pre></td></tr></table></figure>
+
+<p>  注意：str[0] = “A”   不会出错，只是不会工作</p>
+<p><strong>把字符串转换为数组</strong></p>
+<p>​    <strong>split()</strong> 可以将字符串转换为数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> txt = <span class="string">"a,b,c,d,e"</span>;</span><br><span class="line"><span class="keyword">var</span> s = txt.split(<span class="string">","</span>);   <span class="comment">//当txt内容以，分隔时</span></span><br><span class="line"><span class="keyword">var</span> s = txt.split(<span class="string">" "</span>);   <span class="comment">//当txt内容以  分隔时</span></span><br><span class="line"><span class="keyword">var</span> s = txt.split(<span class="string">"|"</span>);   <span class="comment">//当txt内容以| 分隔时</span></span><br><span class="line"><span class="keyword">var</span> s = txt.split(<span class="string">""</span>);   <span class="comment">//返回的将是一个个字母</span></span><br><span class="line">ducument.getElementById(<span class="string">"demo"</span>).innerHTML = s[<span class="number">0</span>];</span><br></pre></td></tr></table></figure>
+
+<p>  注意：如果内容与(““)内的不相符合，则将不是被配对的连接的字符看作整体来返回，直到遇见下一个配对符号</p>
+<p>​           若一个都匹配不上，则会返回undefined</p>
+<h4 id="JS数值"><a href="#JS数值" class="headerlink" title="JS数值"></a>JS数值</h4><p>书写时数值带不带小数点均可</p>
+<p>科学计数法:  12e5/12E5/12e+5/12E-5</p>
+<p> <strong>精度：</strong>整数精确到15位，超过15位四舍五入位10000 ..的类型</p>
+<p>​             小数的最大位数是17位，使用加减法时结果会精确到如此多位且可能不精确，推荐使用乘除法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">0.2</span> + <span class="number">0.1</span>;   <span class="comment">//0.3000000000004</span></span><br><span class="line"><span class="keyword">var</span> x = (<span class="number">0.2</span> * <span class="number">10</span> + <span class="number">0.1</span> * <span class="number">10</span>) / <span class="number">10</span>;                <span class="comment">//0.3</span></span><br></pre></td></tr></table></figure>
+
+<p>当数字前遇上字符串，字符串后所有数字都会被当作字符串</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x=<span class="number">3</span> + <span class="number">5</span> + <span class="number">8</span>;     x=<span class="number">16</span></span><br><span class="line"><span class="keyword">var</span> x=<span class="string">"3"</span> + <span class="number">5</span> + <span class="number">8</span>;    x=<span class="number">358</span></span><br><span class="line"><span class="keyword">var</span> x=<span class="number">3</span> + <span class="number">5</span> + <span class="string">"8"</span>;    x=<span class="number">88</span></span><br></pre></td></tr></table></figure>
+
+<p>在运算过程（除了+以外的）中，JS会尝试将数字字符串转换为数字</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="string">"100"</span>;</span><br><span class="line"><span class="keyword">var</span> y = <span class="string">"10"</span>;</span><br><span class="line"><span class="keyword">var</span> z = x / y;   <span class="comment">//10</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>NaN</strong></p>
+<p>当试图将非数字字符串和number运算(除了+)时，会返回NaN(Not a Number)</p>
+<p>当试图将NaN和字符串级联时，级联</p>
+<p>NaN的typeof是number</p>
+<p><strong>Infinity</strong></p>
+<p>当计算时超过可能值最大范围或者分母为0时返回Infinity</p>
+<p>Infinity的typeof是数字</p>
+<p><strong>十六进制、八进制</strong></p>
+<p>JS会把前缀为0x的数值解释为十六进制，如0xff (ff与大小写无关)   –255；会把前缀为0的数值解释为八进制</p>
+<p>​       16进制0到9到f 逢16进1；八进制0到7，逢8进1</p>
+<p>用 <strong>toString(10/2/16/8)</strong>得到所输数字的相应进制的数(无前缀)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">32</span>;</span><br><span class="line"><span class="keyword">var</span> b = a.toString(<span class="number">10</span>);              <span class="comment">//30</span></span><br><span class="line"><span class="keyword">var</span> c = a.toSt</span><br><span class="line">ring(<span class="number">2</span>);              <span class="comment">//100000</span></span><br><span class="line"><span class="keyword">var</span> d = a.toString(<span class="number">16</span>);              <span class="comment">//20</span></span><br><span class="line"><span class="keyword">var</span> e = a.toString(<span class="number">8</span>);              <span class="comment">//40</span></span><br><span class="line"><span class="keyword">var</span> g = (<span class="number">30</span> + <span class="number">2</span>).toString(<span class="number">8</span>);</span><br><span class="line"><span class="keyword">var</span> h = (<span class="number">32</span>).toString(<span class="number">8</span>);</span><br></pre></td></tr></table></figure>
+
+<p><strong>规定小数的位数</strong>（返回的数字变成了string类型）</p>
+<p>​    <strong>toExponential()</strong>四舍五入并以科学计数法呈现</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">19.565</span>;</span><br><span class="line"><span class="keyword">var</span> a = x.toExponential(<span class="number">2</span>);    <span class="comment">//1.96e+1</span></span><br><span class="line"><span class="keyword">var</span> b = x.toExponential();     <span class="comment">//1.9565e+1</span></span><br><span class="line"><span class="keyword">var</span> x = <span class="number">9.565</span>;</span><br><span class="line"><span class="keyword">var</span> c = x.toExponential(<span class="number">2</span>);    <span class="comment">//9.57e+0</span></span><br></pre></td></tr></table></figure>
+
+<p>​    <strong>toFixed()</strong>方法与toExponential类似，只是不以科学计数法呈现</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">19.565</span>;</span><br><span class="line"><span class="keyword">var</span> a = x.toFixed(<span class="number">2</span>);      <span class="comment">//19.57</span></span><br></pre></td></tr></table></figure>
+
+<p> <strong>规定数字的长度</strong> （返回的数字变成了string类型）</p>
+<p>​      <strong>toPrecision()</strong>四舍五入返回</p>
+<p><strong>数值返回数值</strong>   (返回的数字是number类型)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">123</span>;</span><br><span class="line"><span class="keyword">var</span> a = x.valueOf();           <span class="comment">//123</span></span><br><span class="line"><span class="keyword">var</span> a = (<span class="number">123</span>).valueOf();       <span class="comment">//123</span></span><br><span class="line"><span class="keyword">var</span> a = (<span class="number">120</span>+<span class="number">3</span>).valueOf();     <span class="comment">//123</span></span><br><span class="line"><span class="comment">//使用这种方法可以object数字转换为number</span></span><br><span class="line"><span class="comment">//string数字还是string</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>将变量转换为数值，全局方法</strong></p>
+<p>​    <strong>Number()</strong> 解析数字字符串并返回数值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElememtById(<span class="string">"demo"</span>).innerHTML = </span><br><span class="line">  <span class="built_in">Number</span>(<span class="literal">true</span>) + <span class="string">"&lt;br&gt;"</span> +          <span class="comment">//1</span></span><br><span class="line">  <span class="built_in">Number</span>(<span class="literal">false</span>) + <span class="string">"&lt;br&gt;"</span> +         <span class="comment">//0</span></span><br><span class="line">  <span class="built_in">Number</span>(<span class="string">"10"</span>) + <span class="string">"&lt;br&gt;"</span> +          <span class="comment">//10</span></span><br><span class="line">  <span class="built_in">Number</span>(<span class="string">"  10"</span>) + <span class="string">"&lt;br&gt;"</span> +        <span class="comment">//10</span></span><br><span class="line">  <span class="built_in">Number</span>(<span class="string">"10  "</span>) + <span class="string">"&lt;br&gt;"</span> +        <span class="comment">//10</span></span><br><span class="line">  <span class="built_in">Number</span>(<span class="string">" 10  "</span>) + <span class="string">"&lt;br&gt;"</span> +       <span class="comment">//10</span></span><br><span class="line">  <span class="built_in">Number</span>(<span class="string">"10.33"</span>) + <span class="string">"&lt;br&gt;"</span> +       <span class="comment">//10.33</span></span><br><span class="line">  <span class="built_in">Number</span>(<span class="string">"10,33"</span>) + <span class="string">"&lt;br&gt;"</span> +       <span class="comment">//NaN</span></span><br><span class="line">  <span class="built_in">Number</span>(<span class="string">"10 33"</span>) + <span class="string">"&lt;br&gt;"</span> +       <span class="comment">//NaN</span></span><br><span class="line">  <span class="built_in">Number</span>(<span class="string">"John"</span>);                  <span class="comment">//NaN</span></span><br><span class="line">  <span class="built_in">Number</span>(<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2017-09-30"</span>));  <span class="comment">//1506729600000</span></span><br><span class="line">          <span class="number">1970.1</span><span class="number">.1</span>到某天的毫秒数</span><br></pre></td></tr></table></figure>
+
+<p>​     <strong>parselnt()</strong>  解析一段字符串并返回数值，允许空格，只返回首个数字(以整数型返回)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = </span><br><span class="line">  <span class="built_in">parseInt</span>(<span class="string">"10"</span>) + <span class="string">"&lt;br&gt;"</span> +        <span class="comment">//10</span></span><br><span class="line">  <span class="built_in">parseInt</span>(<span class="string">"10.33"</span>) + <span class="string">"&lt;br&gt;"</span> +     <span class="comment">//10</span></span><br><span class="line">  <span class="built_in">parseInt</span>(<span class="string">"10 6"</span>) + <span class="string">"&lt;br&gt;"</span> +      <span class="comment">//10 </span></span><br><span class="line">  <span class="built_in">parseInt</span>(<span class="string">"10 years"</span>) + <span class="string">"&lt;br&gt;"</span> +  <span class="comment">//10</span></span><br><span class="line">  <span class="built_in">parseInt</span>(<span class="string">"years 10"</span>);            <span class="comment">//NaN</span></span><br></pre></td></tr></table></figure>
+
+<p>​     <strong>parseFloat()</strong> 功能与parseInt()相似，但是允许返回浮点型</p>
+<p><strong>以下数字属性只能作为结果访问，不可用作功能</strong></p>
+<p><strong>MAX_VALUE</strong></p>
+<p>   返回js中最大的数字</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="built_in">Number</span>.MAX_VALUE;      <span class="comment">//1.7976931348623157e+308</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>MIN_VALUE</strong></p>
+<p>   返回js中最小的数字</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="built_in">Number</span>.MIN_VALUE;      <span class="comment">//5e-324</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>POSITIVE_INFINITY</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="built_in">Number</span>.POSITIVE_INFINITY;  <span class="comment">//infinity(无穷)</span></span><br><span class="line"><span class="keyword">var</span> x = <span class="number">1</span> / <span class="number">0</span>;                     <span class="comment">//infinity</span></span><br></pre></td></tr></table></figure>
+
+<p>  溢出时返回POSITIVE_INFINITY</p>
+<p><strong>NEGATIVE_INFINITY</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="built_in">Number</span>.NEGATIVE_INFINITY;   <span class="comment">//-infinity(无穷)</span></span><br><span class="line"><span class="keyword">var</span> x = <span class="number">-1</span> / <span class="number">0</span>;                     <span class="comment">//-infinity</span></span><br></pre></td></tr></table></figure>
+
+<p>  溢出时返回POSITIVE_INFINITY</p>
+<h4 id="JS数组"><a href="#JS数组" class="headerlink" title="JS数组"></a>JS数组</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> cars = [</span><br><span class="line">    <span class="string">"Saab"</span>,</span><br><span class="line">    <span class="string">"Volvo"</span>,</span><br><span class="line">    <span class="string">"BMW"</span></span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong>使用方括号，定义后加分号，元素间用逗号隔开(最后一个元素后不写逗号），允许空格和折行</p>
+<p><strong>一个可行但一般不使用的方法：</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> cars = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">"Saab"</span>,<span class="string">"Volvo"</span>,<span class="string">"BMW"</span>);</span><br></pre></td></tr></table></figure>
+
+<p>​     <strong>访问数组元素</strong></p>
+<p>通过数字来当作索引，不允许使用命名来当作索引（这是对象使用的）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>注意事项</strong></p>
+<p><strong>1. id定义位置为内容显示位置；</strong></p>
+<p><strong>2. 每一条可执行语句后记得写分号；</strong>   </p>
+<p>*<em>3. 运算符旁边的空格！其他不必在意； *</em></p>
+<p><strong>4. 5 + 6 为运算式，不必加引号；数值不必加引号，字符串需要加单或双引号；</strong></p>
+<p><strong>5. 在恰当的地方折行，最好在运算符（如=)处;</strong></p>
+<p><strong>6. 用花括号{}组合多个js代码组成代码块(script的内容，可用可不用）</strong></p>
+<p><strong>7. 区分(“总计：” +  total ）和（ “总计：+ total”），前者打印出变量total的值，后者打印出total.</strong></p>
+<p><strong>8. 定义（声明）后不带有值的变量的值是undefined</strong></p>
+<p>**9. </p>
+<p>下划线用于分割单词(代替空格):project_name</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/10/07/JavaScript/" data-id="ckbu9dsty0005ekv822y06crd" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FOR-JavaScript/" rel="tag">FOR JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/11/09/CSS/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          HarperBlog
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/09/28/HarperBlog/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">HarperBlog</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/FOR-CSS/" rel="tag">FOR CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/FOR-HTML/" rel="tag">FOR HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/FOR-Java/" rel="tag">FOR Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/FOR-JavaScript/" rel="tag">FOR JavaScript</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/FOR-CSS/" style="font-size: 10px;">FOR CSS</a> <a href="/tags/FOR-HTML/" style="font-size: 10px;">FOR HTML</a> <a href="/tags/FOR-Java/" style="font-size: 10px;">FOR Java</a> <a href="/tags/FOR-JavaScript/" style="font-size: 10px;">FOR JavaScript</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/01/Java%E7%BB%83%E6%89%8B%E9%A1%B9%E7%9B%AE/">Java Practice</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/25/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/09/CSS/">HarperBlog</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/07/JavaScript/">JavaScript</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/28/HarperBlog/">HarperBlog</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
