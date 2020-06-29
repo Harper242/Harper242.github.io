@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>DATA Structure | Hexo</title>
+  <title>DATA_Structure | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="For DATA Structure">
 <meta property="og:type" content="article">
-<meta property="og:title" content="DATA Structure">
+<meta property="og:title" content="DATA_Structure">
 <meta property="og:url" content="http://yoursite.com/2020/06/26/DATA-Structure/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="For DATA Structure">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-06-26T06:18:15.000Z">
-<meta property="article:modified_time" content="2020-06-26T14:06:53.619Z">
+<meta property="article:modified_time" content="2020-06-29T08:46:44.594Z">
 <meta property="article:author" content="Harper">
 <meta property="article:tag" content="STUDY">
 <meta name="twitter:card" content="summary">
@@ -58,9 +58,9 @@
 		<nav class="header-menu">
 			<ul>
 			
-				<li><a href="/">主页</a></li>
+				<li><a href="/home_page">主页</a></li>
 	        
-				<li><a href="/essay">随笔</a></li>
+				<li><a href="/categories">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -134,9 +134,9 @@
 				<ul style="width: 50%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 50%"><a href="/home_page">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/essay">随笔</a></li>
+					<li style="width: 50%"><a href="/categories">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -158,7 +158,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      DATA Structure
+      DATA_Structure
     </h1>
   
 
@@ -173,9 +173,16 @@
       
         <h1 id="For-DATA-Structure"><a href="#For-DATA-Structure" class="headerlink" title="For DATA Structure"></a><center>For DATA Structure</center></h1><a id="more"></a>
 
-<h3 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a>算法分析</h3><h5 id="算法时间复杂度分析"><a href="#算法时间复杂度分析" class="headerlink" title="算法时间复杂度分析"></a>算法时间复杂度分析</h5><p>语句的频度：某一语句在算法中被重复执行的次数。算法中所有语句的频度之和称为T(n)，这是<strong><u>问题规模n</u></strong>的函数</p>
-<p>将T(n)看作算法的执行时间，当问题规模n趋向无穷大时，T(n)的数量级称为时间复杂度，记作T(n)=O(f(n))</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">T(n)&#x3D;5n³-2n²+3n-100&#x3D;O(n³)</span><br></pre></td></tr></table></figure>
+<h3 id="C-PART"><a href="#C-PART" class="headerlink" title="C++ PART"></a>C++ PART</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;     				//编译预处理，文件包含iostream</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>; 					<span class="comment">//引入C++标准名字空间std</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>               				<span class="comment">//主函数</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> name[<span class="number">20</span>];	    				<span class="comment">//定义字符数组</span></span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"please input your name:"</span>;   	<span class="comment">//输出提示信息</span></span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;name; 			    			<span class="comment">//从键盘输入</span></span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"Hello,"</span>&lt;&lt;name&lt;&lt;<span class="string">"!"</span>&lt;&lt;<span class="built_in">endl</span>; 	<span class="comment">//输出问候信息</span></span><br><span class="line">              <span class="keyword">return</span> <span class="number">0</span>;					<span class="comment">//标准I/O流：cin/cout</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="malloc-函数"><a href="#malloc-函数" class="headerlink" title="malloc()函数"></a>malloc()函数</h4><p><strong>使用malloc()函数可以为一个指针变量分配一片连续的空间（称为动态空间分配）。</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;     	</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;								//strcpy需要引用cstring</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>               		</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> *p;</span><br><span class="line">	p=(<span class="keyword">char</span> *)<span class="built_in">malloc</span>(<span class="number">10</span>*<span class="keyword">sizeof</span>(<span class="keyword">char</span>));			<span class="comment">//动态分配10个连续的字节空间</span></span><br><span class="line">	<span class="built_in">strcpy</span>(p,<span class="string">"China"</span>);							<span class="comment">//将“China"存放到p所指向的空间中</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%c\n"</span>,*p);							<span class="comment">//输出字符C</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%s\n"</span>,p);							<span class="comment">//输出字符串China</span></span><br><span class="line">	<span class="built_in">free</span>(p);									<span class="comment">//释放p所指向的空间</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
 
 
       
@@ -281,18 +288,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/07/01/Java%E7%BB%83%E6%89%8B%E9%A1%B9%E7%9B%AE/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/06/29/SuperMap/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Java Practice
+          SuperMap
         
       </div>
     </a>
   
   
-    <a href="/2019/11/09/CSS/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">CSS</div>
+    <a href="/2020/06/25/SetUp_MyBlog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ESSAY</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -319,7 +326,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#For-DATA-Structure"><span class="toc-number">1.</span> <span class="toc-text">For DATA Structure</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#算法分析"><span class="toc-number">1.0.1.</span> <span class="toc-text">算法分析</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#算法时间复杂度分析"><span class="toc-number">1.0.1.0.1.</span> <span class="toc-text">算法时间复杂度分析</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#For-DATA-Structure"><span class="toc-number">1.</span> <span class="toc-text">For DATA Structure</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#C-PART"><span class="toc-number">1.0.1.</span> <span class="toc-text">C++ PART</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#malloc-函数"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">malloc()函数</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
