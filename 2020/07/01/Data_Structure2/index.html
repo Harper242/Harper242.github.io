@@ -6,15 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020 | Hexo</title>
+  <title>DATA_Structure2 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2020/index.html">
+  <meta name="description" content="For DATA Structure ROUND 2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DATA_Structure2">
+<meta property="og:url" content="http://yoursite.com/2020/07/01/Data_Structure2/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="For DATA Structure ROUND 2">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2020/07/02/DMYJLriymf9ZgKz.png">
+<meta property="article:published_time" content="2020-07-01T12:06:15.000Z">
+<meta property="article:modified_time" content="2020-07-02T13:02:18.050Z">
 <meta property="article:author" content="Harper">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/07/02/DMYJLriymf9ZgKz.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -152,37 +158,227 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Data_Structure2" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      DATA_Structure2
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/01/Data_Structure2/" class="archive-article-date">
+
+        
+        <a href="/2020/07/01/Data_Structure2/" class="archive-article-date">
   	<time datetime="2020-07-01T12:06:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-01</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/01/Data_Structure2/">DATA_Structure2</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <center><p style="font-size:30px">For DATA Structure ROUND 2</p></center>
 
-        <div class="article-info info-on-right">
-          
-          
+<a id="more"></a>
+
+<h1 id="数据结构PART"><a href="#数据结构PART" class="headerlink" title="数据结构PART"></a><body style="font-family:oppo sans">数据结构PART</h1><h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>数组的存储次序：按行优先；按列优先</p>
+<p>对于按行优先：存储地址为LOC(ai，j)=LOC(a0,0)+(i*n + j ）*k</p>
+<h3 id="高效算法示例"><a href="#高效算法示例" class="headerlink" title="高效算法示例"></a><p style="color:#6A73B0;font-size:18px">高效算法示例</p></h3><p><strong>1. 设计一个算法，实现一个m×n的整型数组A的转置运算</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">TransMat</span><span class="params">(<span class="keyword">int</span> A[][MAX], <span class="keyword">int</span> B[][MAX],<span class="keyword">int</span> m,<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;  <span class="keyword">int</span> i,j;</span><br><span class="line">   <span class="keyword">for</span> (i=<span class="number">0</span>;i&lt;m;i++)</span><br><span class="line">	<span class="keyword">for</span> (j=<span class="number">0</span>;j&lt;n;j++)</span><br><span class="line">	　　B[j][i]=A[i][j];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>2. 由于对称矩阵中的元素关于主对角线对称，因此在存储时可只存储对称矩阵中上三角+对角线或下三角+对角线中的元素，使得对称的元素共享一个存储空间</strong></p>
+<p>存储即将a中的元素的值按顺序存储在某顺序表或链表等B{bk}中，当i&lt;j（下三角）时，a[i,j]对应的k为j(j+1)/2+i；当i&gt;j(上三角)时，k=i(i+1)/2+j</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">第<span class="number">0</span>行有<span class="number">1</span>个元素</span><br><span class="line">第<span class="number">1</span>行有<span class="number">2</span>个元素</span><br><span class="line">…</span><br><span class="line">第i<span class="number">-1</span>行有i个元素</span><br><span class="line">在第i行中，元素ai,j的前面亦有j个元素</span><br><span class="line">k= i(i+<span class="number">1</span>)/<span class="number">2</span>+j</span><br></pre></td></tr></table></figure>
+
+<p><strong>3. 所谓n阶下（上）三角矩阵，是指矩阵的上（下）三角（不包括对角线）中的元素均为常数c的n阶方阵。<br>设以一维数组B[0..n(n+1)/2]作为n阶三角矩阵A的存储结构。</strong></p>
+<p>..见pptp19</p>
+<p>*<em>4. 若一个n阶方阵A满足其所有非零元素都集中在以主对角线为中心的带状区域中，则称其为n阶对角矩阵。<br>其主对角线上下方各有b条次对角线，称b为矩阵半带宽 *</em></p>
+<p>..见pptp22</p>
+<h2 id="稀疏矩阵"><a href="#稀疏矩阵" class="headerlink" title="稀疏矩阵"></a>稀疏矩阵</h2><p>一个阶数较大的矩阵中的非零元素个数s相对于矩阵元素的总个数t十分小时，即s&lt;&lt;t时，称该矩阵为稀疏矩阵。<br>稀疏矩阵的压缩存储方法是只存储非零元素</p>
+<h3 id="基本运算"><a href="#基本运算" class="headerlink" title="基本运算"></a><p style="color:#6A73B0;font-size:18px">基本运算</p></h3><p><strong>1. 三元组法</strong></p>
+<p>[i,j,值]   数据结构定义:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MaxSize  100		 矩阵中非零元素的最多个数</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> </span></span><br><span class="line"><span class="class">&#123;</span>  <span class="keyword">int</span> r;			 行号</span><br><span class="line">   <span class="keyword">int</span> c;			 列号</span><br><span class="line">   ElemType d;			 元素值为ElemType类型</span><br><span class="line">&#125; TupNode;			 三元组定义</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> </span></span><br><span class="line"><span class="class">&#123;</span>  <span class="keyword">int</span> rows;			 行数</span><br><span class="line">   <span class="keyword">int</span> cols;			 列数</span><br><span class="line">   <span class="keyword">int</span> nums;			 非零元素个数</span><br><span class="line">   TupNode data[MaxSize];</span><br><span class="line">&#125; TSMatrix;			 三元组顺序表定义</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><strong>从一个二维稀疏矩阵创建其三元组表示</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CreatMat</span><span class="params">(TSMatrix &amp;t,ElemType A[M][N])</span></span></span><br><span class="line"><span class="function"></span>&#123;  <span class="keyword">int</span> i,j;</span><br><span class="line">   t.rows=M;t.cols=N;t.nums=<span class="number">0</span>;</span><br><span class="line">   <span class="keyword">for</span> (i=<span class="number">0</span>;i&lt;M;i++)</span><br><span class="line">   &#123;  <span class="keyword">for</span> (j=<span class="number">0</span>;j&lt;N;j++) </span><br><span class="line">         <span class="keyword">if</span> (A[i][j]!=<span class="number">0</span>) 	 只存储非零元素</span><br><span class="line">	　&#123;   t.data[t.nums].r=i;</span><br><span class="line">             t.data[t.nums].c=j;</span><br><span class="line">             t.data[t.nums].d=A[i][j];</span><br><span class="line">             t.nums++;</span><br><span class="line">	　&#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>三元组元素赋值</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Value</span><span class="params">(TSMatrix &amp;t,ElemType x,<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span></span><br><span class="line"><span class="function"></span>&#123;  <span class="keyword">int</span> k=<span class="number">0</span>,k1;</span><br><span class="line">   <span class="keyword">if</span> (i&gt;=t.rows || j&gt;=t.cols)  <span class="keyword">return</span> <span class="number">0</span>;	 参数错误</span><br><span class="line">   <span class="keyword">while</span> (k&lt;t.nums &amp;&amp; i&gt;t.data[k].r) k++;	 查找行</span><br><span class="line">   <span class="keyword">while</span> (k&lt;t.nums &amp;&amp; i==t.data[k].r &amp;&amp; j&gt;t.data[k].c)</span><br><span class="line">      k++; 					 查找列</span><br><span class="line">   <span class="keyword">if</span> (t.data[k].r==i &amp;&amp; t.data[k].c==j)	 存在元素</span><br><span class="line">      t.data[k].d=x;</span><br><span class="line">   <span class="keyword">else</span>			 不存在这样的元素时插入一个元素</span><br><span class="line">   &#123;  <span class="keyword">for</span> (k1=t.nums<span class="number">-1</span>;k1&gt;=k;k1--)</span><br><span class="line">      &#123;    t.data[k1+<span class="number">1</span>].r=t.data[k1].r;</span><br><span class="line">	　　t.data[k1+<span class="number">1</span>].c=t.data[k1].c;</span><br><span class="line">	　　t.data[k1+<span class="number">1</span>].d=t.data[k1].d;</span><br><span class="line">      &#125;</span><br><span class="line">      t.data[k].r=i; t.data[k].c=j;</span><br><span class="line">      t.data[k].d=x; t.nums++;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">return</span> <span class="number">1</span>;			 成功时返回<span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>将指定位置的元素值赋给变量</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Assign</span><span class="params">(TSMatrix t,ElemType &amp;x,<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span></span><br><span class="line"><span class="function"></span>&#123;  <span class="keyword">int</span> k=<span class="number">0</span>;</span><br><span class="line">   <span class="keyword">if</span> (i&gt;=t.rows || j&gt;=t.cols)</span><br><span class="line">      <span class="keyword">return</span> <span class="number">0</span>;				 参数错误</span><br><span class="line">   <span class="keyword">while</span> (k&lt;t.nums &amp;&amp; i&gt;t.data[k].r) k++;	 查找行</span><br><span class="line">   <span class="keyword">while</span> (k&lt;t.nums &amp;&amp; i==t.data[k].r &amp;&amp; j&gt;t.data[k].c) </span><br><span class="line">      k++;					 查找列</span><br><span class="line">   <span class="keyword">if</span> (t.data[k].r==i &amp;&amp; t.data[k].c==j)</span><br><span class="line">	x=t.data[k].d;</span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">	x=<span class="number">0</span>;		 在三元组中没有找到表示是零元素</span><br><span class="line">   <span class="keyword">return</span> <span class="number">1</span>;		 成功时返回<span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>输出三元组</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DispMat</span><span class="params">(TSMatrix t)</span></span></span><br><span class="line"><span class="function"></span>&#123;  <span class="keyword">int</span> i;</span><br><span class="line">   <span class="keyword">if</span> (t.nums&lt;=<span class="number">0</span>)			 没有非零元素时返回</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"\t%d\t%d\t%d\n"</span>,t.rows,t.cols,t.nums);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"\t------------------\n"</span>);</span><br><span class="line">   <span class="keyword">for</span> (i=<span class="number">0</span>;i&lt;t.nums;i++)</span><br><span class="line">     <span class="built_in">printf</span>(<span class="string">"\t%d\t%d\t%d\n"</span>,</span><br><span class="line">		t.data[i].r,t.data[i].c,t.data[i].d);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><strong>2. 十字链法</strong></p>
+<p>….还未搞懂</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> maxSize 4</span></span><br><span class="line"> </span><br><span class="line"> 普通结点定义</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">OLNode</span> &#123;</span></span><br><span class="line">	<span class="keyword">int</span> row, col;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">OLNode</span> *<span class="title">right</span>, *<span class="title">down</span>;</span></span><br><span class="line">	<span class="keyword">float</span> val;</span><br><span class="line">&#125;OLNode,*node;</span><br><span class="line"> </span><br><span class="line"> 头结点结构定义</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	OLNode *rhead, *chead;</span><br><span class="line">	<span class="keyword">int</span> m, n, k;</span><br><span class="line"> </span><br><span class="line">&#125;CrossList;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">InitMatrix</span><span class="params">(CrossList *M)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">createcrossListmat</span><span class="params">(<span class="keyword">float</span> A[][maxSize], <span class="keyword">int</span> m, <span class="keyword">int</span> n, <span class="keyword">int</span> k, CrossList *M)</span></span>;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">float</span> A[][maxSize] = &#123;</span><br><span class="line">		&#123; <span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span> &#125;,</span><br><span class="line">		&#123; <span class="number">0</span>,<span class="number">0</span>,<span class="number">3</span>,<span class="number">2</span> &#125;,</span><br><span class="line">		&#123; <span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span> &#125;,</span><br><span class="line">		&#123; <span class="number">0</span>,<span class="number">2</span>,<span class="number">0</span>,<span class="number">0</span> &#125;</span><br><span class="line">	&#125;;</span><br><span class="line">	<span class="keyword">int</span> m, n, k;</span><br><span class="line">	m = n = maxSize;</span><br><span class="line">	k = <span class="number">5</span>;</span><br><span class="line">	CrossList M;</span><br><span class="line">	InitMatrix(&amp;M);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"十字链表中元素为："</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	createcrossListmat(A, m, n, k, &amp;M);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">InitMatrix</span><span class="params">(CrossList *M)</span> </span>&#123;</span><br><span class="line">	(*M).rhead = (*M).chead = <span class="literal">NULL</span>;</span><br><span class="line">	(*M).k = (*M).m = (*M).n = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">createcrossListmat</span><span class="params">(<span class="keyword">float</span> A[][maxSize], <span class="keyword">int</span> m, <span class="keyword">int</span> n, <span class="keyword">int</span> k, CrossList *M)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> ((*M).rhead)</span><br><span class="line">		<span class="built_in">free</span>((*M).rhead);</span><br><span class="line">	<span class="keyword">if</span> ((*M).chead)</span><br><span class="line">		<span class="built_in">free</span>((*M).chead);</span><br><span class="line">	(*M).m = m;</span><br><span class="line">	(*M).n = n;</span><br><span class="line">	(*M).k = k;</span><br><span class="line">	<span class="keyword">if</span> (!((*M).rhead = (OLNode *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(OLNode)*m)))</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span> (!((*M).chead = (OLNode *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(OLNode)*n)))</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; ++i) &#123;</span><br><span class="line">		(*M).rhead[i].right = <span class="literal">NULL</span>;</span><br><span class="line">		(*M).rhead[i].down = <span class="literal">NULL</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">		(*M).chead[i].right = <span class="literal">NULL</span>;</span><br><span class="line">		(*M).chead[i].down = <span class="literal">NULL</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	 建立列链表的辅助指针数组</span><br><span class="line">	OLNode *temp_r[maxSize];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n; ++j)</span><br><span class="line">		temp_r[j] = &amp;((*M).chead[j]);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; ++i) &#123;</span><br><span class="line">		OLNode *c = &amp;((*M).rhead[i]);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n; ++j) &#123;</span><br><span class="line">			<span class="keyword">if</span> (A[i][j] != <span class="number">0</span>) &#123;</span><br><span class="line">				OLNode *p = (OLNode*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(OLNode));</span><br><span class="line">				p-&gt;row = i;</span><br><span class="line">				p-&gt;col = j;</span><br><span class="line">				p-&gt;val = A[i][j];</span><br><span class="line">				p-&gt;down = <span class="literal">NULL</span>;</span><br><span class="line">				p-&gt;right = <span class="literal">NULL</span>;</span><br><span class="line">				c-&gt;right = p;</span><br><span class="line">				c = p;</span><br><span class="line">				temp_r[j]-&gt;down = p;</span><br><span class="line">				temp_r[j] = p;</span><br><span class="line">				<span class="built_in">cout</span> &lt;&lt; p-&gt;val&lt;&lt;<span class="string">'\t'</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;c</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="树"><a href="#树" class="headerlink" title="树"></a>树</h2><h3 id="树的基本术语"><a href="#树的基本术语" class="headerlink" title="树的基本术语"></a>树的基本术语</h3><ol>
+<li><strong>结点的度：树中每个结点具有的子树数或者后继结点数</strong></li>
+<li><strong>树的度：树中所有结点的度的最大值</strong></li>
+<li><strong>分支结点：或称为非终端结点-度大于0的结点</strong></li>
+<li><strong>叶子结点：度为零的结点</strong></li>
+<li><strong>孩子结点：一个结点的后继称为该结点的孩子结点</strong></li>
+<li><strong>双亲结点：或称为父亲结点-某个结点称为其后继结点的双亲结点</strong></li>
+<li><strong>子孙结点：一个结点的所有子数中的结点（包括子节点和孙孙孙结点）</strong></li>
+<li><strong>祖先节点：包括父节点和爷爷爷结点</strong></li>
+<li><strong>兄弟结点：有同一双亲结点的结点</strong></li>
+<li><strong>结点层次：根节点为第一层，其孩子结点为第二层…</strong></li>
+<li><strong>树的高度：结点的最大层次</strong></li>
+<li><strong>森林：零棵或者多棵互不相交的树的集合</strong></li>
+</ol>
+<h3 id="树的性质"><a href="#树的性质" class="headerlink" title="树的性质"></a>树的性质</h3><ol>
+<li><p><strong>树的结点数=所有结点的度数（包括根结点的）加1=各种类型的结点的个数</strong></p>
+</li>
+<li><p><strong>度为m的树中第i层上至多有m^(i-1)个结点（注意树的度是所有结点的度的最大值）</strong></p>
+<p>推广：当一棵m次树的第i层有mi-1个结点（i≥1）时，称该层是满的，若一棵m次树的所有叶子结点在同一层，除该层外其余每一层都是满的，称为满m次树。显然，满m次树是所有相同高度的m次树中结点总数最多的树。也可以说，对于n个结点，构造的m次树为满m次树或者接近满m次树，此时树的高度最小。</p>
+</li>
+<li><p><strong>高度为h的m次树至多有（m^k-1)/(m-1)个结点</strong></p>
+</li>
+</ol>
+<h3 id="树的基本运算"><a href="#树的基本运算" class="headerlink" title="树的基本运算"></a>树的基本运算</h3><ol>
+<li><strong>先根遍历</strong></li>
+<li><strong>后根遍历</strong></li>
+<li><strong>层次遍历</strong></li>
+</ol>
+<h3 id="树的存储结构"><a href="#树的存储结构" class="headerlink" title="树的存储结构"></a>树的存储结构</h3><ol>
+<li><strong>双亲存储结构</strong></li>
+<li><strong>孩子链存储结构</strong></li>
+<li><strong>孩子兄弟链存储结构</strong></li>
+</ol>
+<h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><p>二叉树的递归定义：二叉树或者是一棵空树。或者是一棵由一个根结点和两棵互不相交的分别称做根结点的左子树和右子树所组成的非空树，左子树和右子树又同样都是一棵二叉树。（递归终止条件：结点左、右子树为空树）</p>
+<h3 id="二叉树的性质"><a href="#二叉树的性质" class="headerlink" title="二叉树的性质"></a>二叉树的性质</h3><ol>
+<li><p><strong>叶子结点数等于度为2的结点数+1</strong></p>
+</li>
+<li><p><strong>第i层上至多有2^(i-1)个结点</strong></p>
+</li>
+<li><p><strong>高度为h的二叉树至多有2^k-1个结点</strong></p>
+</li>
+<li><p><strong>对完全二叉树中编号为i的结点（1≤i≤n，n≥1，n为结点数）有：<br>（1）若i≤（n/2），即2i≤n，则编号为i的结点为分支结点，否则为叶子结点。<br>（2）若n为奇数，则每个分支结点都既有左孩子结点，也有右孩子结点；若n为偶数，则编号最大的分支结点只有左孩子结点，没有右孩子结点，其余分支结点都有左、右孩子结点。</strong></p>
+<p>  <strong>(3）若编号为i的结点有左孩子结点，则左孩子结点的编号为2i；若编号为i的结点有右孩子结点，则右孩子结点的编号为(2i+1)。<br>（4）除树根结点外,若一个结点的编号为i，则它的双亲结点的编号为（i/2），也就是说，当i为偶数时，其双亲结点的编号为i/2,它是双亲结点的左孩子结点，当i为奇数时，其双亲结点的编号为(i-1)/2，它是双亲结点的右孩子结点。</strong></p>
+</li>
+</ol>
+<h3 id="两种特殊的二叉树"><a href="#两种特殊的二叉树" class="headerlink" title="两种特殊的二叉树"></a>两种特殊的二叉树</h3><p><strong>满二叉树：每一层都是满的，即除了叶子结点以外的结点的度数都是2</strong></p>
+<p><strong>完全二叉树：在一棵二叉树中，除最后一层外，若其余层都是满的，并且最后一层或者是满的，或者是在右边缺少连续若干个结点</strong></p>
+<h3 id="递归算法设计的一般方法"><a href="#递归算法设计的一般方法" class="headerlink" title="递归算法设计的一般方法"></a>递归算法设计的一般方法</h3><p><strong>1. 确定递归终止条件（退栈的条件）    2. 确定求解的递归条件</strong></p>
+<p>对原问题f(s)进行分析，假设出合理的“小问题”f(s’)（与数学归纳法中假设n=k-1时等式成立相似）；<br>假设f(s’)是可解的，在此基础上确定f(s)的解，即给出f(s)与f(s’)之间的关系（与数学归纳法中求证n=k时等式成立的过程相似）；<br>确定一个特定情况（如f(1)或f(0)）的解，由此作为递归出口（与数学归纳法中求证n=1或时n=0式成立相似）。</p>
+<p>*<em>1. 对于不带头结点的非空单链表L（结点类型用SLinkNode表示），其结点值均为整数，设计以下递归算法：<br>　（1）求最大的结点值；<br>　（2）求最小的结点值；<br>　（3）正向输出所有结点值；<br>　（4）反向输出所有结点值。 *</em></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">f1</span><span class="params">(SLinkNode *L)</span></span></span><br><span class="line"><span class="function"></span>&#123;  <span class="keyword">int</span> m;</span><br><span class="line">   <span class="keyword">if</span> (L-&gt;next==<span class="literal">NULL</span>) </span><br><span class="line">      <span class="keyword">return</span> L-&gt;data;</span><br><span class="line">   <span class="keyword">else</span> </span><br><span class="line">   &#123;  m=f1(L-&gt;next);		<span class="comment">//递归求大问题的解</span></span><br><span class="line">      <span class="keyword">if</span> (m&gt;L-&gt;data) <span class="keyword">return</span> m;</span><br><span class="line">      <span class="keyword">else</span> <span class="keyword">return</span> L-&gt;data;</span><br><span class="line">　　&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">f2</span><span class="params">(SLinkNode *L)</span></span></span><br><span class="line"><span class="function"></span>&#123;  <span class="keyword">int</span> m;</span><br><span class="line">   <span class="keyword">if</span> (L-&gt;next==<span class="literal">NULL</span>)</span><br><span class="line">	<span class="keyword">return</span> L-&gt;data;</span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">   &#123;  m=f2(L-&gt;next);		<span class="comment">//递归求小问题的解</span></span><br><span class="line">      <span class="keyword">if</span> (m&lt;L-&gt;data) <span class="keyword">return</span> m;</span><br><span class="line">      <span class="keyword">else</span> <span class="keyword">return</span> L-&gt;data;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f3</span><span class="params">(SLinkNode *L)</span></span></span><br><span class="line"><span class="function"></span>&#123;  <span class="keyword">if</span> (L!=<span class="literal">NULL</span>)</span><br><span class="line">   &#123;	<span class="built_in">printf</span>(<span class="string">"%d "</span>,L-&gt;data);</span><br><span class="line">	f3(L-&gt;next);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f4</span><span class="params">(SLinkNode *L)</span></span></span><br><span class="line"><span class="function"></span>&#123;  <span class="keyword">if</span> (L!=<span class="literal">NULL</span>)</span><br><span class="line">   &#123;  f4(L-&gt;next);</span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">"%d "</span>,L-&gt;data);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="二叉树的递归设计算法"><a href="#二叉树的递归设计算法" class="headerlink" title="二叉树的递归设计算法"></a>二叉树的递归设计算法</h2><p>对于二叉树，以二叉链为存储结构，其基本递归运算就是求一个结点p的左子树（p-&gt;lchild）和右子树（p-&gt;rchild）。<br>p-&gt;lchild和p-&gt;rchild一定是一棵二叉树（这是为什么二叉树的定义中空树也是二叉树的原因）。</p>
+<h3 id="基本运算-1"><a href="#基本运算-1" class="headerlink" title="基本运算"></a><p style="color:#6A73B0;font-size:18px">基本运算</p></h3><ul>
+<li><p><strong>创建二叉树</strong></p>
+<p>若ch=’(‘：表示前面刚创建的p结点存在着孩子结点，需将其进栈，以便建立它和其孩子结点的关系。然后开始处理该结点的左孩子，因此置k=1，表示其后创建的结点将作为这个结点（栈顶结点）的左孩子结点；<br>若ch=’)’：表示以栈顶结点为根结点的子树创建完毕，将其退栈；<br>若ch=’,’：表示开始处理栈顶结点的右孩子结点，置k=2；<br>其他情况：只能是单个字符，表示要创建一个新结点p，根据k值建立p结点与栈顶结点之间的联系，当k=1时，表示p结点作为栈顶结点的左孩子结点，当k=2时，表示p结点作为栈顶结点的右孩子结点。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CreateBTree</span><span class="params">(BTNode * &amp;bt,<span class="keyword">char</span> *str)</span></span></span><br><span class="line"><span class="function"></span>&#123;  BTNode *St[MaxSize],*p=<span class="literal">NULL</span>;</span><br><span class="line">   <span class="keyword">int</span> top=<span class="number">-1</span>,k,j=<span class="number">0</span>;</span><br><span class="line">   <span class="keyword">char</span> ch;</span><br><span class="line">   bt=<span class="literal">NULL</span>;		<span class="comment">//建立的二叉树初始时为空</span></span><br><span class="line">   ch=str[j];</span><br><span class="line"><span class="keyword">while</span> (ch!=<span class="string">'\0'</span>)			    <span class="comment">//str未扫描完时循环</span></span><br><span class="line">   &#123;	<span class="keyword">switch</span>(ch)</span><br><span class="line">	&#123;</span><br><span class="line">	<span class="keyword">case</span> <span class="string">'('</span>:top++;St[top]=p;k=<span class="number">1</span>; <span class="keyword">break</span>;    <span class="comment">//为左孩子结点</span></span><br><span class="line">	<span class="keyword">case</span> <span class="string">')'</span>:top--;<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> <span class="string">','</span>:k=<span class="number">2</span>; <span class="keyword">break</span>;		     <span class="comment">//为右孩子结点</span></span><br><span class="line">	<span class="keyword">default</span>:p=(BTNode *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(BTNode));</span><br><span class="line">		p-&gt;data=ch;p-&gt;lchild=p-&gt;rchild=<span class="literal">NULL</span>;</span><br><span class="line">		<span class="keyword">if</span> (bt==<span class="literal">NULL</span>)		     <span class="comment">//p为二叉树的根结点</span></span><br><span class="line">		　　bt=p;</span><br><span class="line">		<span class="keyword">else</span>			     <span class="comment">//已建立二叉树根结点</span></span><br><span class="line">		&#123;   <span class="keyword">switch</span>(k) </span><br><span class="line">		　　&#123;</span><br><span class="line">		　　<span class="keyword">case</span> <span class="number">1</span>:St[top]-&gt;lchild=p;<span class="keyword">break</span>;</span><br><span class="line">		　　<span class="keyword">case</span> <span class="number">2</span>:St[top]-&gt;rchild=p;<span class="keyword">break</span>;</span><br><span class="line">		　　&#125;</span><br><span class="line">		&#125;</span><br><span class="line">      &#125;</span><br><span class="line">      j++;　ch=str[j];</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>销毁</strong></p>
+<p>不能用先根遍历，要用后根遍历</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DestroyBTree</span><span class="params">(BTNode *&amp;bt)</span></span></span><br><span class="line"><span class="function"></span>&#123;   <span class="keyword">if</span> (bt!=<span class="literal">NULL</span>)</span><br><span class="line">　　&#123;	DestroyBTree(bt-&gt;lchild);  递归遍历销毁</span><br><span class="line">	DestroyBTree(bt-&gt;rchild);</span><br><span class="line">       <span class="built_in">free</span>(bt);</span><br><span class="line">　　&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong><u>求高度</u></strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">BTHeight</span><span class="params">(BTNode *bt)</span> </span></span><br><span class="line"><span class="function"></span>&#123;  <span class="keyword">int</span> lchilddep,rchilddep;</span><br><span class="line">   <span class="keyword">if</span> (bt==<span class="literal">NULL</span>) <span class="keyword">return</span>(<span class="number">0</span>); 		   <span class="comment">//空树的高度为0</span></span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">   &#123;  lchilddep=BTHeight(bt-&gt;lchild);  <span class="comment">//求左子树的高度（返回最大的高度）</span></span><br><span class="line">      rchilddep=BTHeight(bt-&gt;rchild);  <span class="comment">//求右子树的高度</span></span><br><span class="line">      <span class="keyword">return</span> (lchilddep&gt;rchilddep)? </span><br><span class="line">                  (lchilddep+<span class="number">1</span>):(rchilddep+<span class="number">1</span>);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>求结点个数</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">NodeCount</span><span class="params">(BTNode *bt)</span>		<span class="comment">//求二叉树bt的结点个数</span></span></span><br><span class="line"><span class="function"></span>&#123;  <span class="keyword">int</span> num1,num2;</span><br><span class="line">   <span class="keyword">if</span> (bt==<span class="literal">NULL</span>)			<span class="comment">//为空树时返回0</span></span><br><span class="line">       <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">   &#123;   num1=NodeCount(bt-&gt;lchild);	<span class="comment">//求左子树结点个数</span></span><br><span class="line">       num2=NodeCount(bt-&gt;rchild);	<span class="comment">//求右子树结点个数</span></span><br><span class="line">       <span class="keyword">return</span> (num1+num2+<span class="number">1</span>);		<span class="comment">//返回和加上1</span></span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong><u>求叶子结点数</u></strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">LeafCount</span><span class="params">(BTNode *bt)</span>	<span class="comment">//求二叉树bt的叶子结点个数</span></span></span><br><span class="line"><span class="function"></span>&#123;  <span class="keyword">int</span> num1,num2;</span><br><span class="line">   <span class="keyword">if</span> (bt==<span class="literal">NULL</span>)		<span class="comment">//空树返回0</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">   <span class="keyword">else</span> <span class="keyword">if</span> (bt-&gt;lchild==<span class="literal">NULL</span> &amp;&amp; bt-&gt;rchild==<span class="literal">NULL</span>) </span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;		<span class="comment">//为叶子结点时返回1</span></span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">   &#123;	num1=LeafCount(bt-&gt;lchild);	<span class="comment">//求左子树叶子结点个数？会遍历到所有的左子树吗</span></span><br><span class="line">	num2=LeafCount(bt-&gt;rchild); 	<span class="comment">//求右子树叶子结点个数</span></span><br><span class="line">	<span class="keyword">return</span> (num1+num2);		<span class="comment">//返回和</span></span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong><u>括号表示法输出二叉树</u></strong></p>
+<p>对于非空二叉树bt，先输出其元素值。<br>当存在左孩子结点或右孩子结点时，输出一个“(”符号。<br>递归处理左子树。<br>有右子树时输出一个“,”符号。<br>递归处理右子树。<br>最后输出一个“)”符号。 </p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DispBTree</span><span class="params">(BTNode *bt)</span> </span></span><br><span class="line"><span class="function"></span>&#123;  <span class="keyword">if</span> (bt!=<span class="literal">NULL</span>)</span><br><span class="line">   &#123;  <span class="built_in">printf</span>(<span class="string">"%c"</span>,bt-&gt;data);</span><br><span class="line">      <span class="keyword">if</span> (bt-&gt;lchild!=<span class="literal">NULL</span> || bt-&gt;rchild!=<span class="literal">NULL</span>)</span><br><span class="line">      &#123;  <span class="built_in">printf</span>(<span class="string">"("</span>);			<span class="comment">//有子树时输出'('</span></span><br><span class="line">	　DispBTree(bt-&gt;lchild);	<span class="comment">//递归处理左子树</span></span><br><span class="line">	　<span class="keyword">if</span> (bt-&gt;rchild!=<span class="literal">NULL</span>)	<span class="comment">//有右子树时输出','</span></span><br><span class="line">	     <span class="built_in">printf</span>(<span class="string">","</span>);</span><br><span class="line">	　DispBTree(bt-&gt;rchild);	<span class="comment">//递归处理右子树</span></span><br><span class="line">	　<span class="built_in">printf</span>(<span class="string">")"</span>);			<span class="comment">//输出一个')'</span></span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="遍历方法"><a href="#遍历方法" class="headerlink" title="遍历方法"></a><p style="color:#6A73B0;font-size:18px">遍历方法</p></h3><p>二叉树的遍历是指按一定的次序访问树中的所有结点，使每个结点恰好被访问一次。其中遍历次序保证了二叉树上每个结点均被访问一次且仅有一次。<br>二叉树常用的遍历有先序（根）遍历、中序（根）遍历、后序（根）遍历和层次遍历。<br>所谓先序、中序、后序，区别在于访问根结点的顺序。</p>
+<img src="https://i.loli.net/2020/07/02/DMYJLriymf9ZgKz.png" alt="p1" style="zoom:50%;" />
+
+<p><strong>1. <u>先序遍历</u></strong></p>
+<p>ABD(退栈)EG(退栈)H(退栈退栈)CFK</p>
+<p>若二叉树非空，则：① 访问根结点；② 先序遍历左子树；③ 先序遍历右子树。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PreOrder</span><span class="params">(BTNode *bt)</span></span></span><br><span class="line"><span class="function"></span>&#123;   <span class="keyword">if</span> (bt!=<span class="literal">NULL</span>)</span><br><span class="line">　　&#123;	<span class="built_in">printf</span>(<span class="string">"%c "</span>,bt-&gt;data);</span><br><span class="line">	PreOrder(bt-&gt;lchild);	退栈以后发生了什么？</span><br><span class="line">	PreOrder(bt-&gt;rchild);</span><br><span class="line">　　&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>2. 中序遍历</strong></p>
+<p>DBGEHACKF</p>
+<p>若二叉树非空，则：① 中序遍历左子树；② 访问根结点；③ 中序遍历右子树。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InOrder</span><span class="params">(BTNode *bt)</span></span></span><br><span class="line"><span class="function"></span>&#123;   <span class="keyword">if</span> (bt!=<span class="literal">NULL</span>)</span><br><span class="line">　　&#123;	InOrder(bt-&gt;lchild);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%c "</span>,bt-&gt;data);</span><br><span class="line">	InOrder(bt-&gt;rchild);</span><br><span class="line">　　&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>3. 后序遍历</strong>（以上：深度优先）</p>
+<p>DGHEBKFCA</p>
+<p>若二叉树非空，则：① 后序遍历左子树；② 后序遍历右子树；③ 访问根结点。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PostOrder</span><span class="params">(BTNode *bt)</span></span></span><br><span class="line"><span class="function"></span>&#123;   <span class="keyword">if</span> (bt!=<span class="literal">NULL</span>)</span><br><span class="line">　　&#123;	PostOrder(bt-&gt;lchild);</span><br><span class="line">	PostOrder(bt-&gt;rchild);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%c "</span>,bt-&gt;data);</span><br><span class="line">　　&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>3. 层次遍历</strong>（广度优先）</p>
+<p>ABCDEFGHK</p>
+<p>层次遍历是从根结点出发，按照从上向下，同一层从左向右的次序访问所有的结点。采用层次遍历得到的访问结点序列称为层次遍历序列。<br>层次遍历序列的特点：其第一个元素值为二叉树中根结点值。</p>
+<p>在层次遍历算法中采用一个循环队列qu来实现。<br>层次遍历算法的实现过程：先将根结点进队，在队不空时循环：从队列中出队一个结点p，访问它；若它有左孩子结点，将左孩子结点进队；若它有右孩子结点，将右孩子结点进队。如此操作直到队空为止。 </p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">LevelOrder</span><span class="params">(BTNode *bt)</span></span></span><br><span class="line"><span class="function"></span>&#123;   BTNode *p;</span><br><span class="line">　　BTNode *qu[MaxSize];	<span class="comment">//定义循环队列,存放二叉链结点指针</span></span><br><span class="line">　　<span class="keyword">int</span> front,rear;		<span class="comment">//定义队头和队尾指针</span></span><br><span class="line">　　front=rear=<span class="number">0</span>;		<span class="comment">//置队列为空队列</span></span><br><span class="line">　　rear++; qu[rear]=bt;	<span class="comment">//根结点指针进入队列</span></span><br><span class="line">　　<span class="keyword">while</span> (front!=rear)		<span class="comment">//队列不为空循环</span></span><br><span class="line">　　&#123;	front=(front+<span class="number">1</span>)%MaxSize;</span><br><span class="line">	p=qu[front];			<span class="comment">//出队结点p</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%c "</span>,p-&gt;data);	<span class="comment">//访问该结点</span></span><br><span class="line">	<span class="keyword">if</span> (p-&gt;lchild!=<span class="literal">NULL</span>)		<span class="comment">//有左孩子时将其进队</span></span><br><span class="line">	&#123;   rear=(rear+<span class="number">1</span>)%MaxSize;</span><br><span class="line">	　　qu[rear]=p-&gt;lchild;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (p-&gt;rchild!=<span class="literal">NULL</span>)		<span class="comment">//有右孩子时将其进队</span></span><br><span class="line">	&#123;   rear=(rear+<span class="number">1</span>)%MaxSize;</span><br><span class="line">	　　qu[rear]=p-&gt;rchild;</span><br><span class="line">	&#125;</span><br><span class="line">　　&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>没办法用递归，因为递归是深度优先</p>
+<h3 id="高效算法示例-1"><a href="#高效算法示例-1" class="headerlink" title="高效算法示例"></a><p style="color:#6A73B0;font-size:18px">高效算法示例</p></h3><p><strong>1. 假设二叉树中所有结点值为整数，采用二叉链存储结构，求该二叉树b中所有结点值之和。</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Sum</span><span class="params">(BTNode *b)</span></span></span><br><span class="line"><span class="function"></span>&#123;  <span class="keyword">if</span> (b==<span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">   <span class="keyword">else</span> <span class="keyword">return</span>(b-&gt;data+Sum(b-&gt;lchild)+Sum(b-&gt;rchild));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>2. 假设以二叉链作为存储结构，设计一个算法求二叉树中单分支结点个数。</strong></p>
+<p>采用后序递归遍历方式求解。空树返回0.<br>先求出左子树中单分支结点个数m，再求出右子树中单分支结点个数n。<br>若根结点是单分支结点，则返回m+n+1，否则返回m+n。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">onenodes1</span><span class="params">(BTNode *bt)</span></span></span><br><span class="line"><span class="function"></span>&#123;  <span class="keyword">int</span> m,n;</span><br><span class="line">   <span class="keyword">if</span> (bt!=<span class="literal">NULL</span>)</span><br><span class="line">   &#123;  m=onenodes1(bt-&gt;lchild);</span><br><span class="line">      n=onenodes1(bt-&gt;lchild);</span><br><span class="line">      <span class="keyword">if</span> ((bt-&gt;lchild==<span class="literal">NULL</span> &amp;&amp; bt-&gt;rchild!=<span class="literal">NULL</span>)	<span class="comment">//单分支</span></span><br><span class="line">		|| (bt-&gt;lchild!=<span class="literal">NULL</span> &amp;&amp; bt-&gt;rchild==<span class="literal">NULL</span>))</span><br><span class="line">         <span class="keyword">return</span>(<span class="number">1</span>+m+n);</span><br><span class="line">      <span class="keyword">else</span>			<span class="comment">//其他情况</span></span><br><span class="line">	　<span class="keyword">return</span>(m+n);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span>;		<span class="comment">//空树返回0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>3. 设计一个算法，由给定的二叉树的二叉链存储结构建立其对应的顺序存储结构。</strong></p>
+<p>思路：<br>sb初始时是一个所有元素为‘#’的一维数组，它的空间是由系统自动分配的。<br>二叉树中某一个结点值存放在sb[i]中，应由sb[i]指定一个结点而不仅仅是sb。<br>在二叉树的二叉链存储结构bt中，bt指向根结点。应由根结点bt修改sb中sb[1]元素值。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">trans1</span><span class="params">(BTNode *bt, SqBinTree &amp;sb,<span class="keyword">int</span> i)</span></span></span><br><span class="line"><span class="function"></span>&#123;　<span class="comment">//i的初值为根结点编号1</span></span><br><span class="line">   <span class="keyword">if</span> (bt!=<span class="literal">NULL</span>)</span><br><span class="line">   &#123;  sb[i]=bt-&gt;data;			<span class="comment">//创建根结点</span></span><br><span class="line">      trans1(bt-&gt;lchild,sb,<span class="number">2</span>*i);	<span class="comment">//递归建立左子树</span></span><br><span class="line">      trans1(bt-&gt;rchild,sb,<span class="number">2</span>*i+<span class="number">1</span>);	<span class="comment">//递归建立右子树</span></span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">else</span> sb[i]=<span class="string">'#'</span>;		<span class="comment">//不存在的结点的对应位置值为'#'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>4. 假设以二叉链作为存储结构，设计一个算法，输出每个叶子结点的所有祖先结点(图像如上）。并给出下图的二叉树的求解结果。</strong></p>
+<p><strong>采用先序遍历的递归方法求解。</strong>用path数组保存从根结点开始的路径，pathlen保存path中的元素个数。<br>在先序遍历时，当找到某个叶子结点时，path中恰好保存了它的所有祖先结点，输出即可。<br>若不是叶子结点，将其保存到path中，再在左子树中递归查找，之后再在右子树中递归查找。 </p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ancestor1</span><span class="params">(BTNode *bt,ElemType path[],<span class="keyword">int</span> pathlen)</span></span></span><br><span class="line"><span class="function"></span>&#123;  <span class="keyword">int</span> i;</span><br><span class="line">   <span class="keyword">if</span> (bt!=<span class="literal">NULL</span>)</span><br><span class="line">   &#123;  <span class="keyword">if</span> (bt-&gt;lchild==<span class="literal">NULL</span> &amp;&amp; bt-&gt;rchild==<span class="literal">NULL</span>) <span class="comment">//bt为叶结点</span></span><br><span class="line">      &#123;  <span class="built_in">printf</span>(<span class="string">"  %c结点的所有祖先结点: "</span>,bt-&gt;data);</span><br><span class="line">	　<span class="keyword">for</span> (i=pathlen<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)</span><br><span class="line">	      <span class="built_in">printf</span>(<span class="string">"%c "</span>,path[i]);</span><br><span class="line">	　<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">else</span></span><br><span class="line">      &#123;  path[pathlen]=bt-&gt;data;	<span class="comment">//将当前结点放入路径中</span></span><br><span class="line">	　pathlen++;			<span class="comment">//path中元素个数增1</span></span><br><span class="line">	　ancestor1(bt-&gt;lchild,path,pathlen);  <span class="comment">//扫描左子树</span></span><br><span class="line">	　ancestor1(bt-&gt;rchild,path,pathlen);  <span class="comment">//扫描右子树</span></span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>采用层次遍历方法求解.</strong>设置一个非循环队列qu，其中元素有两个域：s为二叉树中结点指针，parent存放该结点的双亲结点在qu中的下标，另外front和rear为队头队尾指针，初值均为0。<br>先将根结点进队，其parent置为-1（根结点没有双亲）。<br>当队不空时循环：出队一个结点p，它在qu中的下标为front。<br>如果p结点为叶结点，它的所有祖先必在队列qu中，通过结点的parent导出所有祖先结点并输出。<br>否则，若p结点有左孩子，将左孩子进队，并置左孩子的parent为front；若p结点有右孩子，将右孩子进队，并置右孩子的parent为front。 </p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ancestor2</span><span class="params">(BTNode *bt)</span></span></span><br><span class="line"><span class="function"></span>&#123;  BTNode *p; <span class="keyword">int</span> i;</span><br><span class="line">   <span class="class"><span class="keyword">struct</span> </span></span><br><span class="line"><span class="class">   &#123;</span>  BTNode *s;		<span class="comment">//存放结点指针</span></span><br><span class="line">      <span class="keyword">int</span> parent;		<span class="comment">//存放其双亲结点在qu中的下标</span></span><br><span class="line">   &#125; qu[MaxSize];		<span class="comment">//qu存放队中元素</span></span><br><span class="line">   <span class="keyword">int</span> front=<span class="number">-1</span>,rear=<span class="number">-1</span>;	<span class="comment">//队头队尾指针</span></span><br><span class="line">   rear++; qu[rear].s=bt;	<span class="comment">//根结点进队</span></span><br><span class="line">   qu[rear].parent=<span class="number">-1</span>;	<span class="comment">//根结点没有双亲,其parent置为-1</span></span><br><span class="line">     <span class="keyword">while</span> (front!=rear)	　<span class="comment">//队不空循环</span></span><br><span class="line">　&#123;  front++;</span><br><span class="line">     p=qu[front].s;	　<span class="comment">//出队一个结点p,它在qu中的下标为front</span></span><br><span class="line">     <span class="keyword">if</span> (p-&gt;lchild==<span class="literal">NULL</span> &amp;&amp; p-&gt;rchild==<span class="literal">NULL</span>)　<span class="comment">//若p为叶结点</span></span><br><span class="line">     &#123;  <span class="built_in">printf</span>(<span class="string">"  %c结点的所有祖先结点: "</span>,p-&gt;data);</span><br><span class="line">        i=qu[front].parent;</span><br><span class="line">        <span class="keyword">while</span> (i!=<span class="number">-1</span>)</span><br><span class="line">        &#123;  <span class="built_in">printf</span>(<span class="string">"%c "</span>,qu[i].s-&gt;data);</span><br><span class="line">           i=qu[i].parent;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">     &#125;</span><br><span class="line">    <span class="keyword">if</span> (p-&gt;lchild!=<span class="literal">NULL</span>)	  <span class="comment">//p有左孩子,将左孩子进队</span></span><br><span class="line">    &#123;  rear++;</span><br><span class="line">	qu[rear].s=p-&gt;lchild;</span><br><span class="line">	qu[rear].parent=front;  <span class="comment">//左孩子双亲为qu[front]结点</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (p-&gt;rchild!=<span class="literal">NULL</span>)	  <span class="comment">//p有右孩子,将右孩子进队</span></span><br><span class="line">    &#123;  rear++;</span><br><span class="line">	qu[rear].s=p-&gt;rchild;</span><br><span class="line">	qu[rear].parent=front;  <span class="comment">//右孩子双亲为qu[front]结点</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &quot;BTree.cpp&quot;</span><br><span class="line">void main()</span><br><span class="line">&#123;   BTNode *bt;</span><br><span class="line">　　ElemType path[MaxSize];</span><br><span class="line">　　CreateBTree(bt,&quot;A(B(D,E(G,H)),C(,F(K)))&quot;);</span><br><span class="line">		&#x2F;&#x2F;建立图6.14的二叉链</span><br><span class="line">　　printf(&quot;bt括号表示法:&quot;); DispBTree(bt); printf(&quot;\n&quot;);</span><br><span class="line">　　printf(&quot;解法1:\n&quot;);</span><br><span class="line">　　printf(&quot;输出每个叶结点的所有祖先结点:\n&quot;);</span><br><span class="line">　　ancestor1(bt,path,0);</span><br><span class="line">　　printf(&quot;解法2:\n&quot;);</span><br><span class="line">　　printf(&quot;输出每个叶结点的所有祖先结点:\n&quot;);</span><br><span class="line">　　ancestor2(bt);</span><br><span class="line">    DestroyBTree(bt);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</body>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i><i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -195,218 +391,117 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/01/Data_Structure2/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/01/Java%E7%BB%83%E6%89%8B%E9%A1%B9%E7%9B%AE/" class="archive-article-date">
-  	<time datetime="2020-06-30T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-01</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/07/01/Java%E7%BB%83%E6%89%8B%E9%A1%B9%E7%9B%AE/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java Practice</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/01/Java%E7%BB%83%E6%89%8B%E9%A1%B9%E7%9B%AE/">Java Practice</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PRACTICE</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/study//" class="article-tag-list-link color1">study</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#数据结构PART"><span class="toc-number">1.</span> <span class="toc-text">数据结构PART</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#数组"><span class="toc-number">1.1.</span> <span class="toc-text">数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#高效算法示例"><span class="toc-number">1.1.1.</span> <span class="toc-text">高效算法示例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#稀疏矩阵"><span class="toc-number">1.2.</span> <span class="toc-text">稀疏矩阵</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本运算"><span class="toc-number">1.2.1.</span> <span class="toc-text">基本运算</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#树"><span class="toc-number">1.3.</span> <span class="toc-text">树</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#树的基本术语"><span class="toc-number">1.3.1.</span> <span class="toc-text">树的基本术语</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#树的性质"><span class="toc-number">1.3.2.</span> <span class="toc-text">树的性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#树的基本运算"><span class="toc-number">1.3.3.</span> <span class="toc-text">树的基本运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#树的存储结构"><span class="toc-number">1.3.4.</span> <span class="toc-text">树的存储结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二叉树"><span class="toc-number">1.4.</span> <span class="toc-text">二叉树</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#二叉树的性质"><span class="toc-number">1.4.1.</span> <span class="toc-text">二叉树的性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#两种特殊的二叉树"><span class="toc-number">1.4.2.</span> <span class="toc-text">两种特殊的二叉树</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#递归算法设计的一般方法"><span class="toc-number">1.4.3.</span> <span class="toc-text">递归算法设计的一般方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二叉树的递归设计算法"><span class="toc-number">1.5.</span> <span class="toc-text">二叉树的递归设计算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本运算-1"><span class="toc-number">1.5.1.</span> <span class="toc-text">基本运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#遍历方法"><span class="toc-number">1.5.2.</span> <span class="toc-text">遍历方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#高效算法示例-1"><span class="toc-number">1.5.3.</span> <span class="toc-text">高效算法示例</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/29/SuperMap/" class="archive-article-date">
-  	<time datetime="2020-06-29T08:49:06.680Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/29/SuperMap/">SuperMap</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/study//" class="article-tag-list-link color1">study</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/26/DATA-Structure1/" class="archive-article-date">
-  	<time datetime="2020-06-26T06:18:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-26</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/26/DATA-Structure1/">DATA_Structure1</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/study//" class="article-tag-list-link color1">study</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/26/DATA-Structure/" class="archive-article-date">
-  	<time datetime="2020-06-26T06:18:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/26/DATA-Structure/">DATA_Structure1</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/study//" class="article-tag-list-link color1">study</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/25/SetUp_MyBlog/" class="archive-article-date">
-  	<time datetime="2020-06-25T10:05:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/25/SetUp_MyBlog/">RECORD</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ESSAY//" class="article-tag-list-link color1">ESSAY</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -429,8 +524,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
